@@ -379,8 +379,8 @@
 
         .secondary-btn {
             background-color: transparent;
-            border: 2px solid var(--border-color);
-            color: var(--text-color);
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
         }
 
         .secondary-btn:hover {
@@ -693,7 +693,7 @@
             width: 80px;
             height: 80px;
             background: rgba(59, 130, 246, 0.1);
-            color: var(--accent-color);
+            color: var(--primary-color);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -703,7 +703,7 @@
         }
 
         .category-card:hover .category-icon {
-            background: var(--accent-color);
+            background: var(--primary-color);
             color: #fff;
             transform: scale(1.15) rotate(8deg);
         }
@@ -1066,7 +1066,7 @@
             position: relative;
             padding: 7rem 0;
             background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), 
-                        url('https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&q=80&w=1600') no-repeat center center/cover;
+                        url('https://www.hardwarestore.com/media/wysiwyg/20240829_130402_-_Aubuchon_NEWPORT_NH_-_055.jpg?auto=webp&format=pjpg&quality=85') no-repeat center center/cover;
             color: #fff;
             text-align: center;
         }

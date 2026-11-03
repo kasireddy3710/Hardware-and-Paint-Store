@@ -1,4 +1,4 @@
- :root {
+:root {
             --bg-color: #dae7f5;
             --bg-secondary: #f1f5f9;
             --card-bg: #ffffff;
@@ -69,7 +69,7 @@
             background-color: var(--bg-secondary);
         }
 
-        /* ================= STANDARD CARDS (Lighting Effects Removed) ================= */
+        /* ================= STANDARD CARDS ================= */
         .card-base {
             border: 1px solid var(--border-color);
             border-radius: 12px;
@@ -111,7 +111,6 @@
             transform: translateX(0);
         }
 
-        /* Pulse Animation for interactive badges/highlights */
         @keyframes pulse-subtle {
             0%, 100% { transform: scale(1); }
             50% { transform: scale(1.02); }
@@ -242,7 +241,7 @@
             width: 100%;
         }
 
-        /* ================= DROPDOWN MENU STYLES ================= */
+        /* DROPDOWN MENU */
         .dropdown {
             position: relative;
         }
@@ -313,6 +312,7 @@
             color: var(--secondary-color);
             transform: translateY(-2px);
         }
+        
         .theme-toggle, .rtl-toggle {
             background-color: var(--card-bg);
             color: var(--text-color);
@@ -348,7 +348,7 @@
             color: var(--primary-color);
         }
 
-        /* ================= BUTTONS & ANIMATED RIPPLE EFFECT ================= */
+        /* ================= BUTTONS ================= */
         .btn {
             display: inline-flex;
             align-items: center;
@@ -393,8 +393,8 @@
 
         .secondary-btn {
             background-color: transparent;
-            border: 2px solid var(--border-color);
-            color: var(--text-color);
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
         }
 
         .secondary-btn:hover {
@@ -511,7 +511,7 @@
             box-shadow: 0 4px 12px rgba(249, 115, 22, 0.15);
         }
 
-        /* ================= SECTION COMMON ================= */
+        /* ================= SECTIONS COMMON ================= */
         .section-padding {
             padding: 6rem 0;
         }
@@ -550,7 +550,7 @@
             transform: scale(1.05);
         }
 
-        /* ================= SECTION 1: HERO ================= */
+        /* ================= HERO SECTION ================= */
         .hero-section {
             padding: 10rem 0 6rem;
             min-height: 100vh;
@@ -664,7 +664,7 @@
             color: var(--text-muted);
         }
 
-        /* ================= SECTION 2: ABOUT ================= */
+        /* ================= ABOUT SECTION ================= */
         .about-grid {
             display: grid;
             grid-template-columns: 1fr 1.2fr;
@@ -732,7 +732,7 @@
             transform: scale(1.2);
         }
 
-        /* ================= SECTION 3: SERVICES ================= */
+        /* ================= SERVICES SECTION ================= */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -785,7 +785,7 @@
             font-size: 0.95rem;
         }
 
-        /* ================= SECTION 4: PRODUCTS ================= */
+        /* ================= PRODUCTS SECTION ================= */
         .products-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -872,7 +872,7 @@
             margin-left: 8px;
         }
 
-        /* ================= SECTION 5: PRICING ================= */
+        /* ================= PRICING SECTION ================= */
         .pricing-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -973,7 +973,7 @@
             color: #ef4444;
         }
 
-        /* ================= SECTION 6: BLOG ================= */
+        /* ================= BLOG SECTION ================= */
         .blog-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -1052,116 +1052,56 @@
             gap: 12px;
         }
 
-        /* ================= VIDEO SHOWCASE ================= */
-        .video-section {
-            padding: 4rem 0;
+       
+        /* ================= NEW TREND CTA SECTION ================= */
+        .trend-cta-section {
+            padding: 5rem 0 6rem;
         }
 
-        .video-wrapper {
-            position: relative;
-            width: 100%;
-            padding-bottom: 56.25%;
-            height: 0;
-            overflow: hidden;
-            border-radius: 12px;
+        .trend-cta-card {
+            background: linear-gradient(135deg, var(--card-bg) 0%, var(--bg-secondary) 100%);
             border: 1px solid var(--border-color);
-            background: var(--card-bg);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-            transition: transform 0.4s ease, box-shadow 0.4s ease;
-        }
-        
-        .video-wrapper:hover {
-            box-shadow: 0 20px 45px rgba(0,0,0,0.15);
-            transform: translateY(-4px);
+            border-radius: 20px;
+            padding: 4rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 3rem;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+            position: relative;
+            overflow: hidden;
         }
 
-        .video-wrapper iframe {
+        .trend-cta-card::before {
+            content: '';
             position: absolute;
             top: 0;
             left: 0;
-            width: 100%;
+            width: 6px;
             height: 100%;
-            border: none;
-            border-radius: 12px;
+            background: var(--primary-color);
         }
 
-        /* ================= CONTACT ================= */
-        .contact-section {
-            margin-bottom: 4rem;
+        .trend-cta-text h2 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 0.8rem;
         }
 
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1.5fr;
-            gap: 3rem;
-        }
-
-        .contact-info {
-            padding: 3rem;
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-            border: 1px solid var(--border-color);
-            background: var(--card-bg);
-            border-radius: 12px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.02);
-            transition: transform 0.3s ease;
-        }
-
-        .contact-info h3 {
-            font-size: 1.8rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .contact-info p {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            color: var(--text-muted);
-            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-
-        .contact-info p:hover {
-            transform: translateX(8px);
-            color: var(--text-color);
-        }
-
-        .contact-info i {
+        .trend-cta-text h2 span {
             color: var(--primary-color);
-            font-size: 1.2rem;
-            transition: transform 0.3s ease;
-        }
-        
-        .contact-info p:hover i {
-            transform: scale(1.2) rotate(10deg);
         }
 
-        .contact-form {
-            padding: 3rem;
+        .trend-cta-text p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            max-width: 600px;
+        }
+
+        .trend-cta-actions {
             display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-            border: 1px solid var(--border-color);
-            background: var(--card-bg);
-            border-radius: 12px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.02);
-        }
-
-        .form-group input, .form-group textarea {
-            width: 100%;
-            padding: 1rem;
-            background: var(--bg-color);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            color: var(--text-color);
-            outline: none;
-            transition: var(--transition);
-        }
-
-        .form-group input:focus, .form-group textarea:focus {
-            border-color: var(--primary-color);
-            transform: translateY(-1px);
-            box-shadow: 0 4px 12px rgba(249, 115, 22, 0.15);
+            gap: 1rem;
+            flex-shrink: 0;
         }
 
         /* ================= FOOTER ================= */
@@ -1282,7 +1222,8 @@
         [dir="rtl"] .hero-btns,
         [dir="rtl"] .social-icons,
         [dir="rtl"] .about-features,
-        [dir="rtl"] .pricing-features li {
+        [dir="rtl"] .pricing-features li,
+        [dir="rtl"] .trend-cta-actions {
             flex-direction: row-reverse;
         }
 
@@ -1292,9 +1233,14 @@
 
         /* ================= RESPONSIVE DESIGN ================= */
         @media (max-width: 1024px) {
-            .hero-container, .about-grid, .contact-grid {
+            .hero-container, .about-grid, .trend-cta-card {
                 grid-template-columns: 1fr;
                 gap: 3rem;
+            }
+            .trend-cta-card {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 3rem;
             }
             .services-grid, .products-grid, .pricing-grid {
                 grid-template-columns: repeat(2, 1fr);
@@ -1353,6 +1299,22 @@
             }
             .hero-content h1 {
                 font-size: 2.5rem;
+            }
+            .showcase-content {
+                padding: 2rem;
+            }
+            .showcase-content h2 {
+                font-size: 2rem;
+            }
+            .trend-cta-card {
+                padding: 2rem;
+            }
+            .trend-cta-actions {
+                flex-direction: column;
+                width: 100%;
+            }
+            .trend-cta-actions .btn {
+                width: 100%;
             }
             .footer-container {
                 grid-template-columns: 1fr;

@@ -1,4 +1,4 @@
-const themeToggle = document.getElementById('themeToggle');
+ const themeToggle = document.getElementById('themeToggle');
         const rtlToggle = document.getElementById('rtlToggle');
         const hamburger = document.getElementById('hamburger');
         const navbar = document.getElementById('navbar');

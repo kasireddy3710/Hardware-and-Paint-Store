@@ -627,10 +627,41 @@
             color: var(--primary-color);
             font-size: 1.2rem;
             transition: transform 0.3s ease;
+            min-width: 20px;
+            text-align: center;
         }
 
         .contact-info p:hover i {
             transform: scale(1.2);
+        }
+
+        /* Added Detailed Time Breakdown Styles */
+        .info-time-breakdown {
+            margin-top: 0.5rem;
+            padding-top: 1.2rem;
+            border-top: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+
+        .info-time-breakdown h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-color);
+            margin-bottom: 0.2rem;
+        }
+
+        .time-row {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .time-row span:last-child {
+            font-weight: 500;
+            color: var(--text-color);
         }
 
         .contact-form {
@@ -655,45 +686,6 @@
             border-color: var(--primary-color);
             box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.15);
             transform: translateY(-2px);
-        }
-
-        /* ================= STORE LOCATIONS ================= */
-        .locations-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-        }
-
-        .location-card {
-            padding: 2.5rem 2rem;
-            text-align: center;
-            transition: var(--transition);
-        }
-
-        .location-card:hover {
-            transform: translateY(-8px);
-        }
-
-        .location-icon {
-            font-size: 2.5rem;
-            color: var(--primary-color);
-            margin-bottom: 1.5rem;
-            transition: transform 0.4s ease;
-        }
-
-        .location-card:hover .location-icon {
-            transform: scale(1.2) rotate(10deg);
-        }
-
-        .location-card h3 {
-            font-size: 1.3rem;
-            margin-bottom: 0.8rem;
-        }
-
-        .location-card p {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            margin-bottom: 1.5rem;
         }
 
         /* ================= STORE MAP & BRANCH LOCATOR SECTION ================= */
@@ -1079,7 +1071,7 @@
 
         /* ================= RESPONSIVE DESIGN ================= */
         @media (max-width: 1024px) {
-            .hero-container, .contact-grid, .locations-grid, .departments-grid, .visualizer-container, .store-map-layout {
+            .hero-container, .contact-grid, .departments-grid, .visualizer-container, .store-map-layout {
                 grid-template-columns: 1fr;
                 gap: 3rem;
             }

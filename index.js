@@ -1,9 +1,8 @@
-const themeToggle = document.getElementById('themeToggle');
+ const themeToggle = document.getElementById('themeToggle');
         const rtlToggle = document.getElementById('rtlToggle');
         const hamburger = document.getElementById('hamburger');
         const navbar = document.getElementById('navbar');
         const navLinks = document.querySelectorAll('.nav-link');
-        const contactForm = document.getElementById('contactForm');
         const dropdowns = document.querySelectorAll('.dropdown');
 
         // Quote Modal Elements
@@ -103,7 +102,6 @@ const themeToggle = document.getElementById('themeToggle');
             });
         });
 
-        // Mobile dropdown toggle compatibility
         dropdowns.forEach(drop => {
             drop.addEventListener('click', (e) => {
                 if (window.innerWidth <= 768) {
@@ -112,15 +110,6 @@ const themeToggle = document.getElementById('themeToggle');
                 }
             });
         });
-
-        // ================= CONTACT FORM SUBMISSION =================
-        if (contactForm) {
-            contactForm.addEventListener('submit', (e) => {
-                e.preventDefault();
-                alert('Thank you for reaching out! Our hardware & paint support team will get back to you shortly.');
-                contactForm.reset();
-            });
-        }
 
         // ================= SCROLL REVEAL ANIMATIONS (INTERSECTION OBSERVER) =================
         const observerOptions = {

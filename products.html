@@ -373,50 +373,26 @@
             </div>
         </section>
 
-        <!-- SECTION 6: INSTANT CONTRACTOR QUOTE ESTIMATOR & CTA -->
-        <section class="quote-cta-section">
+        <!-- SECTION 6: TRENDING CTA -->
+        <section class="trend-cta-section">
             <div class="container">
-                <div class="quote-cta-wrapper">
-                    <div class="quote-info">
-                        <span class="badge"><i class="fa-solid fa-calculator"></i> Fast Estimate</span>
-                        <h2>Calculate Your Jobsite Supply Estimate Instantly</h2>
-                        <p>Select your trade scale and project scope below to generate an immediate material package estimation with pro contractor pricing.</p>
-                        <div class="quote-benefits">
-                            <div class="quote-benefit-item">
-                                <i class="fa-solid fa-circle-check"></i> Real-time inventory availability check
-                            </div>
-                            <div class="quote-benefit-item">
-                                <i class="fa-solid fa-circle-check"></i> Instant bulk tier discount application
-                            </div>
-                            <div class="quote-benefit-item">
-                                <i class="fa-solid fa-circle-check"></i> Same-day jobsite dispatch priority
-                            </div>
+                <div class="trend-cta-wrapper">
+                    <div class="trend-content">
+                        <span class="trend-badge"><i class="fa-solid fa-fire"></i> Trending Now</span>
+                        <h2>Upgrade to Smart Pro Tools</h2>
+                        <p>Join the future of construction. Equip your crew with our new line of IoT-enabled measuring devices and app-connected power tools for maximum precision and efficiency.</p>
+                        <div class="trend-actions">
+                            <button class="btn trend-btn" onclick="document.getElementById('quoteModal').classList.add('active')">
+                                Shop Smart Tools <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                           
                         </div>
                     </div>
-                    <div class="quote-form-box">
-                        <h3>Instant Package Estimator</h3>
-                        <form id="quoteEstimatorForm">
-                            <div class="form-group">
-                                <label for="projectType">Select Project Category</label>
-                                <select id="projectType">
-                                    <option value="120">Commercial Construction & Framing</option>
-                                    <option value="80">Residential Interior Renovation</option>
-                                    <option value="60">Full House Paint & Finishing</option>
-                                    <option value="40">Electrical & Safety Retrofit</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="projectScale">Project Scale / Units</label>
-                                <input type="number" id="projectScale" value="5" min="1" max="100">
-                            </div>
-                            <div class="estimated-result">
-                                <span>Estimated Package Total:</span>
-                                <h4 id="estimatedPrice">$600.00</h4>
-                            </div>
-                            <button type="button" class="btn primary-btn full-width" onclick="document.getElementById('quoteModal').classList.add('active')">
-                                <i class="fa-solid fa-paper-plane"></i> Request Detailed Quote Package
-                            </button>
-                        </form>
+                    <div class="trend-image">
+                        <img src="https://premierliteracy.net/wp-content/uploads/2026/03/Do-cordless-power-tools-have-enough-power-for-professional-work.jpeg" alt="Smart Power Tools Trending">
+                        <div class="glass-float-card">
+                            <i class="fa-solid fa-wifi"></i> Bluetooth Enabled
+                        </div>
                     </div>
                 </div>
             </div>
@@ -485,6 +461,8 @@
     </footer>
 
     <!-- Custom JS -->
-    <script src="products.js"></script>
+    <script src="products.js">
+       
+    </script>
 </body>
 </html>

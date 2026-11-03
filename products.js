@@ -1,4 +1,4 @@
-const themeToggle = document.getElementById('themeToggle');
+ const themeToggle = document.getElementById('themeToggle');
         const rtlToggle = document.getElementById('rtlToggle');
         const hamburger = document.getElementById('hamburger');
         const navbar = document.getElementById('navbar');
@@ -12,11 +12,6 @@ const themeToggle = document.getElementById('themeToggle');
         const heroOpenQuoteBtn = document.getElementById('heroOpenQuote');
         const closeQuoteModalBtn = document.getElementById('closeQuoteModal');
         const modalQuoteForm = document.getElementById('modalQuoteForm');
-
-        // Quote Calculator Elements
-        const projectTypeSelect = document.getElementById('projectType');
-        const projectScaleInput = document.getElementById('projectScale');
-        const estimatedPriceEl = document.getElementById('estimatedPrice');
 
         // ================= THEME SWITCHER =================
         themeToggle.addEventListener('click', () => {
@@ -134,17 +129,6 @@ const themeToggle = document.getElementById('themeToggle');
                 });
             });
         });
-
-        // ================= INSTANT QUOTE ESTIMATOR LOGIC =================
-        function updateEstimate() {
-            const baseRate = parseFloat(projectTypeSelect.value) || 0;
-            const scale = parseInt(projectScaleInput.value) || 1;
-            const total = baseRate * scale * 10;
-            estimatedPriceEl.textContent = '$' + total.toFixed(2);
-        }
-
-        projectTypeSelect.addEventListener('change', updateEstimate);
-        projectScaleInput.addEventListener('input', updateEstimate);
 
         // Header shadow on scroll for sticky header
         window.addEventListener('scroll', () => {

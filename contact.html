@@ -133,7 +133,23 @@
                         <p><i class="fa-solid fa-location-dot"></i> 123 Industrial Parkway, Hardware City, HC 90210</p>
                         <p><i class="fa-solid fa-phone"></i> +1 (555) 839-2000</p>
                         <p><i class="fa-solid fa-envelope"></i> support@toolhubstore.com</p>
-                        <p><i class="fa-solid fa-clock"></i> Mon - Sat: 7:00 AM - 7:00 PM</p>
+                        
+                        <!-- Added Expanded Schedule/Time Details inside contact-info -->
+                        <div class="info-time-breakdown">
+                            <h4><i class="fa-solid fa-clock" style="margin-right: 8px;"></i> Operating & Support Hours</h4>
+                            <div class="time-row">
+                                <span>Monday – Friday:</span>
+                                <span>7:00 AM – 7:00 PM</span>
+                            </div>
+                            <div class="time-row">
+                                <span>Saturday:</span>
+                                <span>8:00 AM – 5:00 PM</span>
+                            </div>
+                            <div class="time-row">
+                                <span>Sunday & Holidays:</span>
+                                <span>9:00 AM – 2:00 PM </span>
+                            </div>
+                        </div>
                     </div>
                     <form class="contact-form clean-border" id="contactForm">
                         <div class="form-group">
@@ -156,37 +172,6 @@
                         </div>
                         <button type="submit" class="btn primary-btn full-width">Send Message</button>
                     </form>
-                </div>
-            </div>
-        </section>
-
-        <!-- SECTION 2: STORE LOCATIONS -->
-        <section class="section-padding animate-on-scroll">
-            <div class="container">
-                <div class="section-header">
-                    <span class="badge"><i class="fa-solid fa-map-location-dot"></i> Branch Network</span>
-                    <h2>Our Store Locations</h2>
-                    <p>Find a Tool Hub branch near you for in-person pickups and paint blending.</p>
-                </div>
-                <div class="locations-grid">
-                    <div class="location-card clean-border">
-                        <div class="location-icon"><i class="fa-solid fa-store"></i></div>
-                        <h3>Downtown Central Branch</h3>
-                        <p>458 Market St, Hardware City, HC 90211</p>
-                        <button class="btn secondary-btn small-btn" onclick="document.getElementById('quoteModal').classList.add('active')">Get Directions</button>
-                    </div>
-                    <div class="location-card clean-border">
-                        <div class="location-icon"><i class="fa-solid fa-warehouse"></i></div>
-                        <h3>North Industrial Hub</h3>
-                        <p>123 Industrial Parkway, HC 90210</p>
-                        <button class="btn secondary-btn small-btn" onclick="document.getElementById('quoteModal').classList.add('active')">Get Directions</button>
-                    </div>
-                    <div class="location-card clean-border">
-                        <div class="location-icon"><i class="fa-solid fa-shop"></i></div>
-                        <h3>Westside Builders Outlet</h3>
-                        <p>789 Sunset Blvd, HC 90215</p>
-                        <button class="btn secondary-btn small-btn" onclick="document.getElementById('quoteModal').classList.add('active')">Get Directions</button>
-                    </div>
                 </div>
             </div>
         </section>
@@ -407,6 +392,8 @@
     </footer>
 
     <!-- Custom JS -->
-    <script src="contact.js"> </script>
+    <script src="contact.js">
+       
+    </script>
 </body>
 </html>

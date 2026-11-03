@@ -659,85 +659,87 @@
             margin-bottom: 1.5rem;
         }
 
-        /* ================= NEW INTERACTIVE TIMELINE SECTION ================= */
+        /* ================= ADJUSTED & ENHANCED TIMELINE SECTION (RTL SUPPORTED) ================= */
         .timeline-section {
             position: relative;
             max-width: 900px;
             margin: 0 auto;
-            padding: 2rem 0;
+            padding: 3rem 0;
         }
 
         .timeline-section::before {
             content: '';
             position: absolute;
-            top: 0;
-            bottom: 0;
+            top: 20px;
+            bottom: 20px;
             left: 50%;
-            width: 3px;
-            background: var(--primary-color);
+            width: 4px;
+            background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
             transform: translateX(-50%);
+            border-radius: 4px;
         }
 
         .timeline-item {
             position: relative;
-            margin-bottom: 3rem;
+            margin-bottom: 3.5rem;
             width: 50%;
-            padding-right: 2.5rem;
+            padding-right: 3rem;
         }
 
         .timeline-item:nth-child(even) {
             margin-left: 50%;
             padding-right: 0;
-            padding-left: 2.5rem;
+            padding-left: 3rem;
         }
 
         .timeline-dot {
             position: absolute;
-            top: 20px;
-            right: -8px;
-            width: 16px;
-            height: 16px;
+            top: 24px;
+            right: -10px;
+            width: 20px;
+            height: 20px;
             background: var(--primary-color);
-            border: 3px solid var(--card-bg);
+            border: 4px solid var(--card-bg);
             border-radius: 50%;
-            box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.2);
+            box-shadow: 0 0 0 4px rgba(249, 115, 22, 0.25);
             z-index: 10;
         }
 
         .timeline-item:nth-child(even) .timeline-dot {
             right: auto;
-            left: -8px;
+            left: -10px;
         }
 
         .timeline-content {
-            padding: 2rem;
+            padding: 2.2rem;
             background: var(--card-bg);
             border: 1px solid var(--border-color);
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-radius: 14px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.06);
             transition: var(--transition);
         }
 
         .timeline-content:hover {
             border-color: var(--primary-color);
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(249, 115, 22, 0.12);
         }
 
         .timeline-year {
             display: inline-block;
-            background: rgba(249, 115, 22, 0.1);
+            background: rgba(249, 115, 22, 0.12);
             color: var(--primary-color);
             font-weight: 700;
-            padding: 0.3rem 0.9rem;
+            padding: 0.35rem 1rem;
             border-radius: 20px;
             font-size: 0.9rem;
             margin-bottom: 0.8rem;
         }
 
         .timeline-content h4 {
-            font-size: 1.25rem;
+            font-size: 1.3rem;
             margin-bottom: 0.5rem;
+            font-weight: 700;
         }
 
         .timeline-content p {
@@ -883,22 +885,29 @@
             margin: 0 auto 2rem;
             opacity: 0.95;
         }
+
+        /* ================= COLOR-ENHANCED CTA BUTTON ================= */
         .cta-btn {
-            background: #fff;
-            color: var(--text-color);
-            padding: 0.9rem 2.2rem;
-            border-radius: 8px;
+            background: #1e293b;
+            color: #ffffff;
+            padding: 1rem 2.5rem;
+            border-radius: 10px;
             font-weight: 700;
+            font-size: 1.05rem;
             transition: var(--transition);
             display: inline-flex;
             align-items: center;
-            gap: 8px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            gap: 10px;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
         }
         .cta-btn:hover {
-            background: var(--card-bg);
+            background: #ffffff;
             color: var(--primary-color);
-            transform: translateY(-3px);
+            border-color: #ffffff;
+            transform: translateY(-4px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
         }
 
         /* ================= FOOTER ================= */
@@ -1004,7 +1013,7 @@
             color: var(--primary-color);
         }
 
-        /* ================= RTL SUPPORT ================= */
+        /* ================= RTL SUPPORT & TIMELINE RTL ADJUSTMENTS ================= */
         [dir="rtl"] {
             text-align: right;
         }
@@ -1017,6 +1026,27 @@
         }
         [dir="rtl"] .showcase-option-card.active, [dir="rtl"] .showcase-option-card:hover {
             transform: translateX(-5px);
+        }
+
+        /* RTL Timeline Overrides */
+        [dir="rtl"] .timeline-item {
+            width: 50%;
+            padding-right: 0;
+            padding-left: 3rem;
+        }
+        [dir="rtl"] .timeline-item:nth-child(even) {
+            margin-left: 0;
+            margin-right: 50%;
+            padding-left: 0;
+            padding-right: 3rem;
+        }
+        [dir="rtl"] .timeline-dot {
+            right: auto;
+            left: -10px;
+        }
+        [dir="rtl"] .timeline-item:nth-child(even) .timeline-dot {
+            left: auto;
+            right: -10px;
         }
 
         /* ================= RESPONSIVE DESIGN ================= */
@@ -1072,13 +1102,28 @@
                 left: 20px;
             }
             .timeline-item {
-                width: 100%;
+                width: 100% !important;
                 padding-left: 3.5rem !important;
                 padding-right: 0 !important;
                 margin-left: 0 !important;
+                margin-right: 0 !important;
             }
             .timeline-dot {
                 left: 12px !important;
                 right: auto !important;
+            }
+            
+            /* RTL Mobile Timeline Overrides */
+            [dir="rtl"] .timeline-section::before {
+                left: auto;
+                right: 20px;
+            }
+            [dir="rtl"] .timeline-item {
+                padding-left: 0 !important;
+                padding-right: 3.5rem !important;
+            }
+            [dir="rtl"] .timeline-dot {
+                left: auto !important;
+                right: 12px !important;
             }
         }

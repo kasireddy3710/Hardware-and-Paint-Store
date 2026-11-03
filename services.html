@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - Tool Hub & Paint Store</title>
+
+    <link rel="icon" type="image/png" href="/8eee87d8-c4de-4aaa-bc48-69386eb19802.jpg">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+   <link rel="stylesheet" href="services.css">
+</head>
+<body>
+
+    <!-- ================= HEADER / NAVBAR ================= -->
+    <header class="header" id="header">
+        <div class="container nav-container">
+            <a href="/services.html" class="logo">
+                <div class="logo-icon-wrapper clean-card">
+                    <img src="/8eee87d8-c4de-4aaa-bc48-69386eb19802.jpg" alt="Tool Hub Logo" class="logo-light">
+                    <img src="/9e8f0496-54de-43a0-b288-77802af85bac.jpg" alt="Tool Hub Logo Dark" class="logo-dark">
+                </div>
+                <div class="logo-content">
+                    <span class="logo-title">Tool <span>Hub</span></span>
+                    <span class="logo-subtitle">Brush & Bolt</span>
+                </div>
+            </a>
+
+            <nav class="navbar" id="navbar">
+                <ul class="nav-list">
+                    <li class="dropdown">
+                        <a href="/index.html" class="nav-link">Home <i class="fa-solid fa-chevron-down" style="font-size: 0.7rem;"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/index.html">Home-1</a></li>
+                            <li><a href="/home2.html">Home-2</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/about.html" class="nav-link">About</a></li>
+                    <li><a href="/services.html" class="nav-link active">Services</a></li>
+                    <li><a href="/products.html" class="nav-link">Products</a></li>
+                    <li><a href="/blog.html" class="nav-link">Blog</a></li>
+                    <li><a href="/pricing.html" class="nav-link">Pricing</a></li>
+                    <li><a href="/contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <button class="action-btn" id="themeToggle" title="Toggle Theme">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <button class="action-btn" id="rtlToggle" title="Toggle RTL">
+                    RTL
+                </button>
+                <button class="action-btn quote-btn" id="openQuoteModal">
+                    <i class="fa-solid fa-file-lines"></i> Get a Quote
+                </button>
+                <div class="hamburger" id="hamburger">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ================= GET A QUOTE MODAL POPUP ================= -->
+    <div class="quote-modal" id="quoteModal">
+        <div class="modal-content clean-card">
+            <button class="close-modal" id="closeQuoteModal"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal-header">
+                <h3>Request a Custom Quote</h3>
+                <p>Fill out the details below and our team will get back to you with competitive pricing.</p>
+            </div>
+            <form class="modal-form" id="modalQuoteForm">
+                <div class="form-group">
+                    <input type="text" placeholder="Full Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Email Address" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" placeholder="Phone Number" required>
+                </div>
+                <div class="form-group">
+                    <select required>
+                        <option value="" disabled selected>Select Category / Service</option>
+                        <option value="custom-paint">Custom Paint Matching</option>
+                        <option value="tool-repair">Tool Repair & Maintenance</option>
+                        <option value="equipment-rental">Heavy Equipment Rental</option>
+                        <option value="jobsite-delivery">Jobsite Bulk Delivery</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <textarea rows="4" placeholder="Describe your service or project specifications..." required style="resize: vertical;"></textarea>
+                </div>
+                <button type="submit" class="btn primary-btn full-width">Submit Quote Request</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- ================= MAIN CONTENT (SERVICES PAGE) ================= -->
+    <main>
+
+        <!-- SERVICES HERO SECTION -->
+        <section class="hero-section" id="services-hero">
+            <div class="container hero-container">
+                <div class="hero-content animate-on-scroll">
+                    <span class="badge"><i class="fa-solid fa-screwdriver-wrench"></i> Expert Technical Solutions</span>
+                    <h1>Professional Services Tailored for Every <span class="highlight">Project</span></h1>
+                    <p>From precise custom color mixing to industrial equipment rentals and tool repair, Tool Hub offers comprehensive support to keep your job site running smoothly.</p>
+                    <div class="hero-btns">
+                        <a href="#core-services" class="btn primary-btn clean-card">View Services <i class="fa-solid fa-arrow-down"></i></a>
+                        <!-- Smooth Bouncing CTA Button -->
+                        <button class="btn secondary-btn" id="heroOpenQuote">Get a Quote</button>
+                    </div>
+                </div>
+                <div class="hero-image-wrapper animate-on-scroll">
+                    <img src="https://workfile-cdn.com/legacy/shri-shyam-paints/_Hardware-&-Paint-Supply.jpg" alt="Tool Hub Services" class="hero-img clean-card">
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: SPECIALIZED PACKAGES -->
+        <section class="section-padding" id="core-services">
+            <div class="container">
+                <div class="section-header animate-on-scroll">
+                    <span class="badge"><i class="fa-solid fa-boxes-packing"></i> Bundled Offerings</span>
+                    <h2>Specialized Service Packages</h2>
+                    <p>Bundle high-utility store services to maximize efficiency and cost savings.</p>
+                </div>
+                <div class="packages-grid">
+                    <div class="package-card clean-card animate-on-scroll">
+                        <div class="package-icon"><i class="fa-solid fa-paint-roller"></i></div>
+                        <div class="package-info">
+                            <h3>Full-House Interior Paint Prep</h3>
+                            <p>Includes complete room moisture testing, tailored color-matching swatches, primer mixing, and spray-gun rental support.</p>
+                            <span class="package-price">Starting at $120</span>
+                        </div>
+                    </div>
+                    <div class="package-card clean-card animate-on-scroll">
+                        <div class="package-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                        <div class="package-info">
+                            <h3>Annual Contractor Equipment</h3>
+                            <p>Scheduled quarterly checkups, internal lubrication, battery health assessments, and priority emergency repairs.</p>
+                            <span class="package-price">$49 / Month</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: EQUIPMENT RENTAL HIGHLIGHT -->
+        <section class="section-padding">
+            <div class="container">
+                <div class="rental-banner clean-card animate-on-scroll">
+                    <div class="rental-content">
+                        <span class="badge"><i class="fa-solid fa-truck-ramp-box"></i> Equipment Fleet</span>
+                        <h3>Heavy Equipment & Heavy-Duty Rentals</h3>
+                        <p>Don't want to buy expensive capital tools for a one-off project? Rent professional grade saws, scaffolding, airless paint sprayers, and hammer drills directly from Tool Hub.</p>
+                        <ul class="rental-list">
+                            <li><i class="fa-solid fa-circle-check"></i> Flexible daily and weekly rental terms</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Fully serviced and tested before each dispatch</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Free safety briefing and operational guidance</li>
+                        </ul>
+                        <button class="btn primary-btn" onclick="document.getElementById('quoteModal').classList.add('active')">Inquire About Equipment</button>
+                    </div>
+                    <div class="rental-img clean-card">
+                        <img src="https://worlddigitaljournal.com/wp-content/uploads/2025/03/small-various-choice-of-hardware-tools-display-in-ace-store-ace-hardware-is-a-hypermarket-of-home-product-and-building-construction-in-indonesia-bekasi-indonesia-may-1-2024.jpg" alt="Tool Rentals">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WORKSHOP & SHOWROOM GALLERY -->
+        <section class="section-padding">
+            <div class="container">
+                <div class="section-header animate-on-scroll">
+                    <span class="badge"><i class="fa-solid fa-store"></i> Store & Lab Tour</span>
+                    <h2>Inside Our Workshop & Showroom</h2>
+                    <p>Take a virtual look at our state-of-the-art facilities, color labs, and expansive inventory stores.</p>
+                </div>
+                <div class="gallery-grid">
+                    <div class="gallery-item clean-card animate-on-scroll">
+                        <div class="gallery-img-container">
+                            <img src="https://www.qjpaintworld.co.za/_next/image?url=%2Fimages%2Fcolour-matching-station.png&w=3840&q=75" alt="Color Matching Laboratory">
+                        </div>
+                        <div class="gallery-caption">
+                            <h4>Precision Color Lab</h4>
+                            <p>Computerized optical scanners and automated tint dispensing machines for an exact match every time.</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item clean-card animate-on-scroll">
+                        <div class="gallery-img-container">
+                            <img src="https://thumbs.dreamstime.com/b/modern-workshop-setup-technicians-well-equipped-tool-stations-designed-repair-manufacturing-workflows-351711341.jpg" alt="Tool Repair Workshop">
+                        </div>
+                        <div class="gallery-caption">
+                            <h4>Certified Repair Bay</h4>
+                            <p>Our expert technicians inspect, clean, and rebuild power tools using authentic replacement parts.</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item clean-card animate-on-scroll">
+                        <div class="gallery-img-container">
+                            <img src="https://tse2.mm.bing.net/th/id/OIP.1tMbw8jufpTub5kNzRSTswHaEK?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Hardware Showroom Floor">
+                        </div>
+                        <div class="gallery-caption">
+                            <h4>Pro Hardware Showroom</h4>
+                            <p>Well-stocked aisles carrying heavy fasteners, safety gear, specialized adhesives, and premium lumber products.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FEATURED CONTRACTOR PROJECTS -->
+        <section class="section-padding">
+            <div class="container">
+                <div class="section-header animate-on-scroll">
+                    <span class="badge"><i class="fa-solid fa-helmet-safety"></i> Case Studies</span>
+                    <h2>Featured Contractor Projects</h2>
+                    <p>See how local builders accomplish stunning architectural milestones with Tool Hub supplies.</p>
+                </div>
+                <div class="projects-showcase">
+                    <!-- Project 1 -->
+                    <div class="project-row clean-card animate-on-scroll">
+                        <div class="project-image">
+                            <img src="https://constructionreviewonline.com/knowhow/wp-content/uploads/2023/05/renovations.jpg" alt="Modern Residential Renovation">
+                        </div>
+                        <div class="project-details">
+                            <div class="project-tags">
+                                <span class="project-tag">Interior Paints</span>
+                                <span class="project-tag">Custom Finishes</span>
+                            </div>
+                            <h3>The Modern Glasshouse Renovation</h3>
+                            <p>Utilizing our comprehensive interior paint prep packages and custom tinting services, Dalton Builds transformed a historic downtown residence into a pristine modern masterpiece with flawless wall textures and protective low-VOC coatings.</p>
+                            <button class="btn secondary-btn" onclick="document.getElementById('quoteModal').classList.add('active')">Request Similar Service</button>
+                        </div>
+                    </div>
+                    <!-- Project 2 (Reversed layout) -->
+                    <div class="project-row reverse clean-card animate-on-scroll">
+                        <div class="project-image">
+                            <img src="https://static.vecteezy.com/system/resources/thumbnails/072/423/273/small_2x/steel-skeleton-structure-is-used-in-building-construction-on-a-construction-site-photo.jpeg" alt="Commercial Building Structure">
+                        </div>
+                        <div class="project-details">
+                            <div class="project-tags">
+                                <span class="project-tag">Heavy Equipment Rental</span>
+                                <span class="project-tag">Bulk Logistics</span>
+                            </div>
+                            <h3>Apex Commercial Plaza Framing</h3>
+                            <p>To meet tight structural milestones, Apex Renovations relied on our heavy equipment rental fleet—including commercial scaffolding and high-capacity hammer drills—alongside daily bulk jobsite deliveries to complete framing ahead of schedule.</p>
+                            <button class="btn secondary-btn" onclick="document.getElementById('quoteModal').classList.add('active')">Request Similar Service</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CUSTOMER TESTIMONIALS -->
+        <section class="section-padding">
+            <div class="container">
+                <div class="section-header animate-on-scroll">
+                    <span class="badge"><i class="fa-solid fa-comments"></i> Client Feedback</span>
+                    <h2>What Contractors & Builders Say</h2>
+                    <p>Trusted by local experts for reliable equipment and precision paint matching.</p>
+                </div>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card clean-card animate-on-scroll">
+                        <div>
+                            <div class="testimonial-rating">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="testimonial-text">"Tool Hub's custom color matching saved my latest commercial project. The paint matches the client's brand sample down to the exact shade!"</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">JD</div>
+                            <div class="author-info">
+                                <h4>James Dalton</h4>
+                                <p>Lead Contractor, Dalton Builds</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card clean-card animate-on-scroll">
+                        <div>
+                            <div class="testimonial-rating">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="testimonial-text">"Their heavy equipment rental fleet is top-tier. Everything is inspected, clean, and ready to go straight out of the box."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">SM</div>
+                            <div class="author-info">
+                                <h4>Sarah Miller</h4>
+                                <p>Project Manager, Apex Renovations</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card clean-card animate-on-scroll">
+                        <div>
+                            <div class="testimonial-rating">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="testimonial-text">"Fast delivery times and incredible customer service. Whenever my power tools need diagnostics, these guys handle it quickly."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">MR</div>
+                            <div class="author-info">
+                                <h4>Marcus Roberts</h4>
+                                <p>Independent Electrician</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECOND CTA SECTION -->
+        <section class="secondary-cta-section">
+            <div class="container">
+                <div class="secondary-cta-card clean-card animate-on-scroll">
+                    <span class="badge"><i class="fa-solid fa-handshake"></i> Trade Partnership</span>
+                    <h2>Join Our Contractor Loyalty Program</h2>
+                    <p>Unlock exclusive trade discounts, priority equipment reservations, and direct credit lines for your business operations.</p>
+                    <div class="secondary-cta-buttons">
+                        <button class="btn primary-btn" onclick="document.getElementById('quoteModal').classList.add('active')">Apply For Trade Account</button>
+                        <button class="btn secondary-btn" onclick="document.getElementById('quoteModal').classList.add('active')">Contact Pro Desk</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-col">
+                <a href="/services.html" class="logo">
+                    <div class="logo-icon-wrapper clean-card">
+                        <img src="/8eee87d8-c4de-4aaa-bc48-69386eb19802.jpg" alt="Tool Hub Logo" class="logo-light">
+                        <img src="/9e8f0496-54de-43a0-b288-77802af85bac.jpg" alt="Tool Hub Logo Dark" class="logo-dark">
+                    </div>
+                    <div class="logo-content">
+                        <span class="logo-title">Tool <span>Hub</span></span>
+                        <span class="logo-subtitle">Brush & Bolt</span>
+                    </div>
+                </a>
+                <p>Your trusted partner for professional hardware and superior painting solutions.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="index.html#products">Products</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Categories</h3>
+                <ul>
+                    <li><a href="index.html#products">Power Tools</a></li>
+                    <li><a href="index.html#products">Interior Paints</a></li>
+                    <li><a href="index.html#products">Safety Gear</a></li>
+                    <li><a href="index.html#products">Building Materials</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Newsletter</h3>
+                <p>Subscribe to receive updates on new products and contractor discounts.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" class="btn primary-btn"><i class="fa-solid fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Tool Hub. All Rights Reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#privacy">Privacy Policy</a>
+                    <a href="#terms">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="services.js"></script>
+</body>
+</html>

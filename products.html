@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products Hub - Hardware & Paint Store</title>
+
+    <link rel="icon" type="image/png" href="/8eee87d8-c4de-4aaa-bc48-69386eb19802.jpg">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="products.css">
+</head>
+<body>
+
+    <!-- ================= HEADER / NAVBAR (STICKY) ================= -->
+    <header class="header" id="header">
+        <div class="container nav-container">
+            <a href="/products.html" class="logo">
+                <div class="logo-icon-wrapper">
+                    <img src="/8eee87d8-c4de-4aaa-bc48-69386eb19802.jpg" alt="Tool Hub Logo" class="logo-light">
+                    <img src="/9e8f0496-54de-43a0-b288-77802af85bac.jpg" alt="Tool Hub Logo Dark" class="logo-dark">
+                </div>
+                <div class="logo-content">
+                    <span class="logo-title">Tool <span>Hub</span></span>
+                    <span class="logo-subtitle">Brush & Bolt</span>
+                </div>
+            </a>
+
+            <nav class="navbar" id="navbar">
+                <ul class="nav-list">
+                    <li class="dropdown">
+                        <a href="/index.html" class="nav-link">Home <i class="fa-solid fa-chevron-down" style="font-size: 0.7rem;"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/index.html">Home-1</a></li>
+                            <li><a href="/home2.html">Home-2</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/about.html" class="nav-link">About</a></li>
+                    <li><a href="/services.html" class="nav-link">Services</a></li>
+                    <li><a href="/products.html" class="nav-link active">Products</a></li>
+                    <li><a href="/blog.html" class="nav-link">Blog</a></li>
+                    <li><a href="/pricing.html" class="nav-link">Pricing</a></li>
+                    <li><a href="/contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <button class="action-btn theme-toggle" id="themeToggle" title="Toggle Theme">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <button class="action-btn rtl-toggle" id="rtlToggle" title="Toggle RTL">
+                    RTL
+                </button>
+                <button class="action-btn quote-btn" id="openQuoteModal">
+                    <i class="fa-solid fa-file-lines"></i> Get a Quote
+                </button>
+                <div class="hamburger" id="hamburger">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ================= GET A QUOTE MODAL POPUP ================= -->
+    <div class="quote-modal" id="quoteModal">
+        <div class="modal-content">
+            <button class="close-modal" id="closeQuoteModal"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal-header">
+                <h3>Request a Custom Quote</h3>
+                <p>Fill out the details below and our product sales team will get back to you with competitive pricing.</p>
+            </div>
+            <form class="modal-form" id="modalQuoteForm">
+                <div class="form-group">
+                    <input type="text" placeholder="Full Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Email Address" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" placeholder="Phone Number" required>
+                </div>
+                <div class="form-group">
+                    <select required style="width: 100%; padding: 0.9rem 1rem; background: var(--bg-color); border: 1px solid var(--border-color); border-radius: 8px; color: var(--text-color); outline: none; font-family: inherit;">
+                        <option value="" disabled selected>Select Product Category</option>
+                        <option value="power-tools">Power Tools & Machinery</option>
+                        <option value="paints">Paints, Stains & Finishes</option>
+                        <option value="safety-gear">Safety Gear & Apparel</option>
+                        <option value="bundles">Contractor Bundles</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <textarea rows="4" placeholder="Describe your product quantities or order specifications..." required style="width: 100%; padding: 0.9rem 1rem; background: var(--bg-color); border: 1px solid var(--border-color); border-radius: 8px; color: var(--text-color); outline: none; font-family: inherit; resize: vertical;"></textarea>
+                </div>
+                <button type="submit" class="btn primary-btn full-width">Submit Quote Request</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- ================= MAIN CONTENT ================= -->
+    <main>
+
+        <!-- SECTION 1: PRODUCTS HERO -->
+        <section class="hero-section">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <span class="badge"><i class="fa-solid fa-toolbox"></i> Industrial Grade Catalog</span>
+                    <h1>Explore Pro Tools & <span class="highlight">Vibrant Paints</span></h1>
+                    <p>Equip your workshop and transform your spaces with heavy-duty power tools, precision hand implements, and long-lasting eco-friendly paints.</p>
+                    <div class="hero-btns">
+                        <a href="#catalog" class="btn primary-btn">Browse Catalog <i class="fa-solid fa-arrow-down"></i></a>
+                        <button class="btn hero-quote-btn" id="heroOpenQuote">Get a Quote</button>
+                    </div>
+                </div>
+                <div class="hero-image-wrapper">
+                    <img src="https://www.middlefieldohio.com/wp-content/uploads/2023/04/IMG_0162-scaled.jpg" alt="Professional Tools Collection" class="hero-img">
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: PRODUCT CATALOG -->
+        <section class="section-padding" id="catalog">
+            <div class="container">
+                <div class="section-header">
+                    <span class="badge"><i class="fa-solid fa-store"></i> Full Range</span>
+                    <h2>Our Complete Inventory</h2>
+                    <p>Browse through our extended lineup of 12 top-tier products and supplies.</p>
+                </div>
+                
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All Products</button>
+                    <button class="filter-btn" data-filter="power">Power Tools</button>
+                    <button class="filter-btn" data-filter="paint">Paints & Finishes</button>
+                    <button class="filter-btn" data-filter="safety">Safety Gear</button>
+                </div>
+
+                <div class="products-grid">
+                    <!-- Product 1 -->
+                    <div class="product-card" data-category="power">
+                        <div class="product-img">
+                            <img src="https://i5.walmartimages.com/seo/Dewalt-DCD805B-20V-Compact-Cordless-1-2-Brushless-Hammer-Drill-Tool-Only_0cbea333-c31a-4755-87b5-d1e8a16318aa.0b0f54bb3f956b235b4fbe61073dd527.jpeg" alt="Cordless Drill">
+                            <span class="tag">Sale</span>
+                        </div>
+                        <div class="product-info">
+                            <h4>Pro Cordless Drill 20V</h4>
+                            <div class="rating"><i class="fa-solid fa-star"></i> 4.9 (120)</div>
+                            <div class="price">$149.99 <span>$189.99</span></div>
+                            <button class="btn primary-btn full-width" onclick="document.getElementById('quoteModal').classList.add('active')">Add to Cart</button>
+                        </div>
+                    </div>
+                    <!-- Product 2 -->
+                    <div class="product-card" data-category="paint">
+                        <div class="product-img">
+                            <img src="https://www.masterhaus.bg/thumbs/780x408/products/02/03/03/0203030422-boja-interiorna-ultra-mat-911ml-cs169-concepts-ultra-matte-baza-w4-colorstyle_780x408_pad_478b24840a.jpg" alt="Interior Paint">
+                            <span class="tag" style="background:var(--accent-color);">New</span>
+                        </div>
+                        <div class="product-info">
+                            <h4>Matte Finish Interior Paint</h4>
+                            <div class="rating"><i class="fa-solid fa-star"></i> 4.8 (95)</div>
+                            <div class="price">$45.00</div>
+                            <button class="btn primary-btn full-width" onclick="document.getElementById('quoteModal').classList.add('active')">Add to Cart</button>
+                        </div>
+                    </div>
+                    <!-- Product 3 -->
+                    <div class="product-card" data-category="power">
+                        <div class="product-img">
+                            <img src="https://m.media-amazon.com/images/I/51V-PRid7vL.jpg" alt="Toolbox Set">
+                        </div>
+                        <div class="product-info">
+                            <h4>Heavy Duty Steel Toolbox</h4>
+                            <div class="rating"><i class="fa-solid fa-star"></i> 5.0 (210)</div>
+                            <div class="price">$89.99</div>
+                            <button class="btn primary-btn full-width" onclick="document.getElementById('quoteModal').classList.add('active')">Add to Cart</button>
+                        </div>
+                    </div>
+                    <!-- Product 4 -->
+                    <div class="product-card" data-category="power">
+                        <div class="product-img">
+                            <img src="https://arabtools.com/images/detailed/17/CP_AG115.jpg" alt="Angle Grinder">
+                            <span class="tag">Hot</span>
+                        </div>
+                        <div class="product-info">
+                            <h4>Pro Angle Grinder 4.5"</h4>
+                            <div class="rating"><i class="fa-solid fa-star"></i> 4.7 (78)</div>
+                            <div class="price">$79.99</div>
+                            <button class="btn primary-btn full-width" onclick="document.getElementById('quoteModal').classList.add('active')">Add to Cart</button>
+                        </div>
+                    </div>
+                    <!-- Product 5 -->
+                    <div class="product-card" data-category="paint">
+                        <div class="product-img">
+                            <img src="https://tse3.mm.bing.net/th/id/OIP.jQbKDYf6Qk-TcGhpac2PqAHaHa?r=0&w=600&h=600&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Exterior Paint">
+                        </div>
+                        <div class="product-info">
+                            <h4>Weatherproof Exterior Latex</h4>
+                            <div class="rating"><i class="fa-solid fa-star"></i> 4.9 (64)</div>
+                            <div class="price">$65.50</div>
+                            <button class="btn primary-btn full-width" onclick="document.getElementById('quoteModal').classList.add('active')">Add to Cart</button>
+                        </div>
+                    </div>
+                    <!-- Product 6 -->
+                    <div class="product-card" data-category="safety">
+                        <div class="product-img">
+                            <img src="https://tse1.mm.bing.net/th/id/OIP.TfACgJxJzXfiW9EcUKNAhQHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Safety Goggles">
+                        </div>
+                        <div class="product-info">
+                            <h4>Industrial Impact Goggles</h4>
+                            <div class="rating"><i class="fa-solid fa-star"></i> 4.6 (42)</div>
+                            <div class="price">$19.99</div>
+                            <button class="btn primary-btn full-width" onclick="document.getElementById('quoteModal').classList.add('active')">Add to Cart</button>
+                        </div>
+                    </div>
+                    <!-- Product 7 -->
+                    <div class="product-card" data-category="power">
+                        <div class="product-img">
+                            <img src="https://alrahat.com/wp-content/uploads/2021/06/gks9.jpg" alt="Circular Saw">
+                        </div>
+                        <div class="product-info">
+                            <h4>7-1/4" Heavy Circular Saw</h4>
+                            <div class="rating"><i class="fa-solid fa-star"></i> 4.8 (112)</div>
+                            <div class="price">$129.00</div>
+                            <button class="btn primary-btn full-width" onclick="document.getElementById('quoteModal').classList.add('active')">Add to Cart</button>
+                        </div>
+                    </div>
+                    <!-- Product 8 -->
+                    <div class="product-card" data-category="paint">
+                        <div class="product-img">
+                            <img src="https://toplineflooring.ca/cdn/shop/products/mbp__23804.png?v=1666396258" alt="Primer">
+                        </div>
+                        <div class="product-info">
+                            <h4>Multi-Surface Bonding Primer</h4>
+                            <div class="rating"><i class="fa-solid fa-star"></i> 4.7 (53)</div>
+                            <div class="price">$32.00</div>
+                            <button class="btn primary-btn full-width" onclick="document.getElementById('quoteModal').classList.add('active')">Add to Cart</button>
+                        </div>
+                    </div>
+                    <!-- Product 9 -->
+                    <div class="product-card" data-category="safety">
+                        <div class="product-img">
+                            <img src="https://tse3.mm.bing.net/th/id/OIP.0QdzD8hoJgDXjiUUMyZ9pgHaHa?r=0&w=1500&h=1500&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Work Gloves">
+                        </div>
+                        <div class="product-info">
+                            <h4>Reinforced Leather Work Gloves</h4>
+                            <div class="rating"><i class="fa-solid fa-star"></i> 4.9 (140)</div>
+                            <div class="price">$24.99</div>
+                            <button class="btn primary-btn full-width" onclick="document.getElementById('quoteModal').classList.add('active')">Add to Cart</button>
+                        </div>
+                    </div>
+                    <!-- Product 10 -->
+                    <div class="product-card" data-category="power">
+                        <div class="product-img">
+                            <img src="https://tse4.mm.bing.net/th/id/OIP.CrhOwp4pSs9HF729yN-GQAHaHa?r=0&w=1536&h=1536&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Sander">
+                        </div>
+                        <div class="product-info">
+                            <h4>Random Orbit Palm Sander</h4>
+                            <div class="rating"><i class="fa-solid fa-star"></i> 4.8 (89)</div>
+                            <div class="price">$69.99</div>
+                            <button class="btn primary-btn full-width" onclick="document.getElementById('quoteModal').classList.add('active')">Add to Cart</button>
+                        </div>
+                    </div>
+                    <!-- Product 11 -->
+                    <div class="product-card" data-category="paint">
+                        <div class="product-img">
+                            <img src="https://cdn11.bigcommerce.com/s-syn76bg95k/images/stencil/1280x1280/products/659/2120/691_WdlxTRANSLUCENT_Sample_US__33834.1746558410.png?c=1" alt="Wood Stain">
+                        </div>
+                        <div class="product-info">
+                            <h4>Premium Hardwood Stain & Sealer</h4>
+                            <div class="rating"><i class="fa-solid fa-star"></i> 4.9 (76)</div>
+                            <div class="price">$38.50</div>
+                            <button class="btn primary-btn full-width" onclick="document.getElementById('quoteModal').classList.add('active')">Add to Cart</button>
+                        </div>
+                    </div>
+                    <!-- Product 12 -->
+                    <div class="product-card" data-category="safety">
+                        <div class="product-img">
+                            <img src="https://tse1.mm.bing.net/th/id/OIP.hzqdN1bfeZZT7QhiPoOwlAAAAA?r=0&w=400&h=400&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Hard Hat">
+                        </div>
+                        <div class="product-info">
+                            <h4>ANSI Certified Safety Hard Hat</h4>
+                            <div class="rating"><i class="fa-solid fa-star"></i> 4.7 (65)</div>
+                            <div class="price">$21.50</div>
+                            <button class="btn primary-btn full-width" onclick="document.getElementById('quoteModal').classList.add('active')">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: SPECIALTY PAINTS SHOWCASE -->
+        <section class="section-padding">
+            <div class="container">
+                <div class="paint-showcase-grid">
+                    <div class="paint-showcase-content">
+                        <span class="badge"><i class="fa-solid fa-palette"></i> Color Lab</span>
+                        <h3>Custom Color Lab & Matching Studio</h3>
+                        <p>Bring us any color sample, fabric swatch, or photo, and our advanced spectrophotometer will replicate your exact custom hue within minutes.</p>
+                        <div class="color-swatches">
+                            <div class="swatch swatch-orange" title="Hardware Orange"></div>
+                            <div class="swatch swatch-blue" title="Electric Blue"></div>
+                            <div class="swatch swatch-green" title="Forest Green"></div>
+                            <div class="swatch swatch-dark" title="Midnight Slate"></div>
+                        </div>
+                        <button class="btn primary-btn" onclick="document.getElementById('quoteModal').classList.add('active')">Request Custom Mix</button>
+                    </div>
+                    <div class="paint-img">
+                        <img src="https://i.pinimg.com/736x/54/a6/b4/54a6b43317525eb118dcecd59749ca49.jpg" alt="Paint Mixing and Walls">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: TOOL ACCESSORIES & BUNDLES -->
+        <section class="section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <span class="badge"><i class="fa-solid fa-box-open"></i> Value Bundles</span>
+                    <h2>Contractor Starter Bundles</h2>
+                    <p>Save more when purchasing complete kits configured for specific trades.</p>
+                </div>
+                <div class="bundles-grid">
+                    <div class="bundle-card">
+                        <i class="fa-solid fa-hammer"></i>
+                        <h3>Carpentry Kit</h3>
+                        <p>Includes heavy-duty hammer, chisel set, measuring tape, and framing square.</p>
+                        <div class="price" style="margin-bottom:1.5rem;">$129.99</div>
+                        <button class="btn secondary-btn full-width" onclick="document.getElementById('quoteModal').classList.add('active')">View Bundle</button>
+                    </div>
+                    <div class="bundle-card">
+                        <i class="fa-solid fa-paint-roller"></i>
+                        <h3>Painter's Pro Set</h3>
+                        <p>Professional rollers, extension poles, premium brushes, waste cloth and painter's tape.</p>
+                        <div class="price" style="margin-bottom:1.5rem;">$79.99</div>
+                        <button class="btn secondary-btn full-width" onclick="document.getElementById('quoteModal').classList.add('active')">View Bundle</button>
+                    </div>
+                    <div class="bundle-card">
+                        <i class="fa-solid fa-plug"></i>
+                        <h3>Electrical & Safety</h3>
+                        <p>Voltage detector, wire strippers, insulated screwdrivers, and safety harness.</p>
+                        <div class="price" style="margin-bottom:1.5rem;">$159.99</div>
+                        <button class="btn secondary-btn full-width" onclick="document.getElementById('quoteModal').classList.add('active')">View Bundle</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5: PRO HIGHLIGHTS -->
+        <section class="section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <span class="badge"><i class="fa-solid fa-award"></i> Why Us</span>
+                    <h2>Why Contractors Choose Tool Hub</h2>
+                    <p>Built to support commercial projects and daily professional demands.</p>
+                </div>
+                <div class="highlights-grid">
+                    <div class="highlight-box">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <h4>Lifetime Warranty Support</h4>
+                        <p>All certified power tools come with manufacturer-backed guarantee and local repair centers.</p>
+                    </div>
+                    <div class="highlight-box">
+                        <i class="fa-solid fa-truck-fast"></i>
+                        <h4>Priority Jobsite Delivery</h4>
+                        <p>Get bulk orders and heavy hardware delivered directly to your construction site on schedule.</p>
+                    </div>
+                    <div class="highlight-box">
+                        <i class="fa-solid fa-tags"></i>
+                        <h4>Tiered Volume Discounts</h4>
+                        <p>Save up to 25% on bulk paint buckets, fasteners, and heavy electrical equipment.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 6: INSTANT CONTRACTOR QUOTE ESTIMATOR & CTA -->
+        <section class="quote-cta-section">
+            <div class="container">
+                <div class="quote-cta-wrapper">
+                    <div class="quote-info">
+                        <span class="badge"><i class="fa-solid fa-calculator"></i> Fast Estimate</span>
+                        <h2>Calculate Your Jobsite Supply Estimate Instantly</h2>
+                        <p>Select your trade scale and project scope below to generate an immediate material package estimation with pro contractor pricing.</p>
+                        <div class="quote-benefits">
+                            <div class="quote-benefit-item">
+                                <i class="fa-solid fa-circle-check"></i> Real-time inventory availability check
+                            </div>
+                            <div class="quote-benefit-item">
+                                <i class="fa-solid fa-circle-check"></i> Instant bulk tier discount application
+                            </div>
+                            <div class="quote-benefit-item">
+                                <i class="fa-solid fa-circle-check"></i> Same-day jobsite dispatch priority
+                            </div>
+                        </div>
+                    </div>
+                    <div class="quote-form-box">
+                        <h3>Instant Package Estimator</h3>
+                        <form id="quoteEstimatorForm">
+                            <div class="form-group">
+                                <label for="projectType">Select Project Category</label>
+                                <select id="projectType">
+                                    <option value="120">Commercial Construction & Framing</option>
+                                    <option value="80">Residential Interior Renovation</option>
+                                    <option value="60">Full House Paint & Finishing</option>
+                                    <option value="40">Electrical & Safety Retrofit</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="projectScale">Project Scale / Units</label>
+                                <input type="number" id="projectScale" value="5" min="1" max="100">
+                            </div>
+                            <div class="estimated-result">
+                                <span>Estimated Package Total:</span>
+                                <h4 id="estimatedPrice">$600.00</h4>
+                            </div>
+                            <button type="button" class="btn primary-btn full-width" onclick="document.getElementById('quoteModal').classList.add('active')">
+                                <i class="fa-solid fa-paper-plane"></i> Request Detailed Quote Package
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-col">
+                <a href="/products.html" class="logo">
+                    <div class="logo-icon-wrapper">
+                        <img src="/8eee87d8-c4de-4aaa-bc48-69386eb19802.jpg" alt="Tool Hub Logo" class="logo-light">
+                        <img src="/9e8f0496-54de-43a0-b288-77802af85bac.jpg" alt="Tool Hub Logo Dark" class="logo-dark">
+                    </div>
+                    <div class="logo-content">
+                        <span class="logo-title">Tool <span>Hub</span></span>
+                        <span class="logo-subtitle">Brush & Bolt</span>
+                    </div>
+                </a>
+                <p>Your trusted partner for professional hardware and superior painting solutions.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/about.html">About Us</a></li>
+                    <li><a href="/services.html">Services</a></li>
+                    <li><a href="/products.html">Products</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Categories</h3>
+                <ul>
+                    <li><a href="#catalog">Power Tools</a></li>
+                    <li><a href="#catalog">Interior Paints</a></li>
+                    <li><a href="#catalog">Safety Gear</a></li>
+                    <li><a href="#catalog">Building Materials</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Newsletter</h3>
+                <p>Subscribe to receive updates on new products and contractor discounts.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" class="btn primary-btn"><i class="fa-solid fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Tool Hub. All Rights Reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#privacy">Privacy Policy</a>
+                    <a href="#terms">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="products.js"></script>
+</body>
+</html>

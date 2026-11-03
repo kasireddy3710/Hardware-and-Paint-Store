@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog & Expert Guides - Tool Hub</title>
+
+    <link rel="icon" type="image/png" href="/8eee87d8-c4de-4aaa-bc48-69386eb19802.jpg">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="blog.css">
+</head>
+<body>
+
+    <!-- ================= HEADER / NAVBAR ================= -->
+    <header class="header" id="header">
+        <div class="container nav-container">
+            <a href="/blog.html" class="logo">
+                <div class="logo-icon-wrapper">
+                    <img src="/8eee87d8-c4de-4aaa-bc48-69386eb19802.jpg" alt="Tool Hub Logo" class="logo-light">
+                    <img src="/9e8f0496-54de-43a0-b288-77802af85bac.jpg" alt="Tool Hub Logo Dark" class="logo-dark">
+                </div>
+                <div class="logo-content">
+                    <span class="logo-title">Tool <span>Hub</span></span>
+                    <span class="logo-subtitle">Brush & Bolt</span>
+                </div>
+            </a>
+
+            <nav class="navbar" id="navbar">
+                <ul class="nav-list">
+                    <li class="dropdown">
+                        <a href="/index.html" class="nav-link">Home <i class="fa-solid fa-chevron-down" style="font-size: 0.7rem;"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/index.html">Home-1</a></li>
+                            <li><a href="/home2.html">Home-2</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/about.html" class="nav-link">About</a></li>
+                    <li><a href="/services.html" class="nav-link">Services</a></li>
+                    <li><a href="/products.html" class="nav-link">Products</a></li>
+                    <li><a href="/blog.html" class="nav-link active">Blog</a></li>
+                    <li><a href="/pricing.html" class="nav-link">Pricing</a></li>
+                    <li><a href="/contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <button class="action-btn" id="themeToggle" title="Toggle Theme">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <button class="action-btn" id="rtlToggle" title="Toggle RTL">
+                    RTL
+                </button>
+                <button class="action-btn quote-btn" id="openQuoteModal">
+                    <i class="fa-solid fa-file-lines"></i> Get a Quote
+                </button>
+                <div class="hamburger" id="hamburger">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ================= GET A QUOTE MODAL POPUP ================= -->
+    <div class="quote-modal" id="quoteModal">
+        <div class="modal-content clean-card">
+            <button class="close-modal" id="closeQuoteModal"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal-header">
+                <h3>Request a Custom Quote</h3>
+                <p>Fill out the details below and our team will get back to you with competitive pricing.</p>
+            </div>
+            <form class="modal-form" id="modalQuoteForm">
+                <div class="form-group">
+                    <input type="text" placeholder="Full Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Email Address" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" placeholder="Phone Number" required>
+                </div>
+                <div class="form-group">
+                    <select required style="width: 100%; padding: 0.9rem 1rem; background: var(--bg-color); border: 1px solid var(--border-color); border-radius: 8px; color: var(--text-color); outline: none; font-family: inherit;">
+                        <option value="" disabled selected>Select Category</option>
+                        <option value="power-tools">Power Tools & Equipment</option>
+                        <option value="paints">Paints & Color Mixing</option>
+                        <option value="building-materials">Building Materials (Bulk)</option>
+                        <option value="safety-gear">Safety Gear</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <textarea rows="4" placeholder="Describe your materials or project specifications..." required style="width: 100%; padding: 0.9rem 1rem; background: var(--bg-color); border: 1px solid var(--border-color); border-radius: 8px; color: var(--text-color); outline: none; font-family: inherit; resize: vertical;"></textarea>
+                </div>
+                <button type="submit" class="btn primary-btn full-width">Submit Quote Request</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- ================= MAIN CONTENT ================= -->
+    <main>
+
+        <!-- SECTION 1: BLOG HERO -->
+        <section class="blog-hero animate-fade-in" id="blog-home">
+            <div class="container blog-hero-grid">
+                <div class="blog-hero-content">
+                    <span class="badge"><i class="fa-solid fa-pen-nib"></i> Expert Knowledge Hub</span>
+                    <h1>Insights, Guides, & <span class="highlight">Pro Tips</span> For Every Build</h1>
+                    <p>Discover professional articles, DIY maintenance workflows, and color theory guides written by master builders and expert painters.</p>
+                    <div class="search-box">
+                        <input type="text" placeholder="Search articles on tools, paints, prep...">
+                        <button class="btn primary-btn"><i class="fa-solid fa-search"></i></button>
+                    </div>
+                </div>
+                <div class="blog-hero-img-wrapper">
+                    <img src="https://le-cdn.hibuwebsites.com/c1bd35b3c51f4c438000b8ea661e3858/dms3rep/multi/opt/springvale-hardware-and-paint-hero-hand-and-power-tools-1233w.jpg" alt="Blog Hero Tools" class="blog-hero-img">
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: FEATURED ARTICLE SPOTLIGHT -->
+        <section class="section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <span class="badge"><i class="fa-solid fa-star"></i> Featured Guide</span>
+                    <h2>Editor's Spotlight</h2>
+                    <p>Our top recommended guide of the week for professionals and renovators.</p>
+                </div>
+                <div class="spotlight-card clean-card">
+                    <div class="spotlight-img">
+                        <img src="https://www.wallartinspiration.com/wp-content/uploads/2024/11/accent-wall-colors-1024x585.jpg" alt="Spotlight Article">
+                    </div>
+                    <div class="spotlight-content">
+                        <span class="blog-date"><i class="fa-solid fa-calendar"></i> October 26, 2026</span>
+                        <h3>Mastering Accent Walls: Choosing Colors That Transform Space</h3>
+                        <p>Learn the psychological impact of undertones, how lighting shifts color appearance throughout the day, and professional taping techniques for razor-sharp lines.</p>
+                        <a href="#" class="read-more" onclick="document.getElementById('quoteModal').classList.add('active')">Read Full Article <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: FILTERABLE ARTICLES GRID -->
+        <section class="section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <span class="badge"><i class="fa-solid fa-newspaper"></i> Knowledge Base</span>
+                    <h2>Latest Articles</h2>
+                    <p>Explore all categories or filter by your current project interest.</p>
+                </div>
+                <div class="blog-filters">
+                    <button class="filter-btn active" data-filter="all">All Articles</button>
+                    <button class="filter-btn" data-filter="paints">Paints & Colors</button>
+                    <button class="filter-btn" data-filter="tools">Power Tools</button>
+                    <button class="filter-btn" data-filter="diy">DIY & Renovation</button>
+                </div>
+                <div class="blog-grid">
+                    <div class="blog-card clean-card" data-category="paints">
+                        <div class="blog-img">
+                            <img src="https://th.bing.com/th/id/OIP.xEYX5Ta-MIY5Rt34GCcZ1wHaHa?r=0&o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Painting Tips">
+                        </div>
+                        <div class="blog-content">
+                            <span class="blog-date" style="color:var(--primary-color); font-size:0.85rem; font-weight:600; margin-bottom:0.5rem;"><i class="fa-solid fa-calendar"></i> October 24, 2026</span>
+                            <h4>5 Essential Tips for Flawless Interior Wall Painting</h4>
+                            <p>Learn how to prep walls, avoid brush strokes, and select the right sheen for every residential space.</p>
+                            <a href="#" class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="blog-card clean-card" data-category="tools">
+                        <div class="blog-img">
+                            <img src="https://www.toolmateshire.com.au/wp-content/uploads/2026/04/tool-compliance-maintenance-cordless-drill-workshop-hero.jpeg" alt="Power Tools">
+                        </div>
+                        <div class="blog-content">
+                            <span class="blog-date" style="color:var(--primary-color); font-size:0.85rem; font-weight:600; margin-bottom:0.5rem;"><i class="fa-solid fa-calendar"></i> October 18, 2026</span>
+                            <h4>How to Maintain Your Cordless Power Tools</h4>
+                            <p>Simple maintenance practices to extend battery life and keep motor components clean and functional.</p>
+                            <a href="#" class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="blog-card clean-card" data-category="diy">
+                        <div class="blog-img">
+                            <img src="https://styluxconstruction.com/wp-content/uploads/2023/06/A_panoramic_view_of_a_large-scale_home_renovation_p_9b1a8bf2-bbed-49e8-998d-a6fb15fcd73d-1080x675.jpg" alt="Renovation">
+                        </div>
+                        <div class="blog-content">
+                            <span class="blog-date" style="color:var(--primary-color); font-size:0.85rem; font-weight:600; margin-bottom:0.5rem;"><i class="fa-solid fa-calendar"></i> October 12, 2026</span>
+                            <h4>The Right Hardware for Heavy Cabinetry</h4>
+                            <p>A comprehensive guide on hinges, soft-close sliders, and load-bearing capacities for custom kitchens.</p>
+                            <a href="#" class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: INTERACTIVE DIY PROJECT CALCULATOR -->
+        <section class="section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <span class="badge"><i class="fa-solid fa-calculator"></i> Project Estimator</span>
+                    <h2>Interactive DIY Calculator</h2>
+                    <p>Estimate material requirements, paint volume, and total project cost instantly.</p>
+                </div>
+                <div class="calculator-wrapper clean-card">
+                    <div class="calculator-grid">
+                        <div class="calculator-inputs">
+                            <div class="calculator-form-group">
+                                <label for="projectType">Project Type</label>
+                                <select id="projectType">
+                                    <option value="interior">Interior Room Painting</option>
+                                    <option value="accent">Accent Wall</option>
+                                    <option value="cabinet">Cabinet Refinishing</option>
+                                </select>
+                            </div>
+                            <div class="calculator-form-group">
+                                <label for="roomArea">Total Surface Area (sq. ft.)</label>
+                                <input type="number" id="roomArea" value="350" min="50" max="5000">
+                            </div>
+                            <div class="calculator-form-group">
+                                <label for="qualityTier">Material Quality</label>
+                                <select id="qualityTier">
+                                    <option value="standard">Standard Contractor Grade</option>
+                                    <option value="premium">Premium Pro Grade (+25%)</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="calculator-results">
+                            <h3>Estimate Summary</h3>
+                            <div class="result-item">
+                                <span>Paint/Supplies Needed:</span>
+                                <span id="resGallons">2 Gallons</span>
+                            </div>
+                            <div class="result-item">
+                                <span>Est. Labor / Time:</span>
+                                <span id="resTime">6 - 8 Hours</span>
+                            </div>
+                            <div class="result-item">
+                                <span>Total Estimated Cost:</span>
+                                <span id="resCost" style="color: var(--primary-color); font-size: 1.2rem;">$145.00</span>
+                            </div>
+                            <button class="btn primary-btn full-width" style="margin-top: 1.5rem;" onclick="document.getElementById('quoteModal').classList.add('active')">Save Estimate</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5: WORKSHOP & TOOL GALLERY -->
+        <section class="section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <span class="badge"><i class="fa-solid fa-images"></i> Visual Gallery</span>
+                    <h2>Workshop & Tool Gallery</h2>
+                    <p>Take a visual tour inside professional workshops and organized tool setups.</p>
+                </div>
+                <div class="workshop-gallery-grid">
+                    <div class="workshop-card clean-card">
+                        <div class="workshop-card-img">
+                            <img src="https://tse2.mm.bing.net/th/id/OIP.bnW_hMPdlDVlmqSTISA3HAHaE8?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Precision Power Tools">
+                        </div>
+                        <div class="workshop-card-body">
+                            <div>
+                                <h3>Precision Power Setup</h3>
+                                <p>Optimizing workspace ergonomics and wall-mounted tool racks for maximum workflow efficiency.</p>
+                            </div>
+                            <a href="#" class="read-more" onclick="document.getElementById('quoteModal').classList.add('active')">View Gallery <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="workshop-card clean-card">
+                        <div class="workshop-card-img">
+                            <img src="https://img.ramia.cz/userimages/product/2/54f78e01c2cb600da4d6783e3fe219bf_large.jpg" alt="Advanced Woodworking">
+                        </div>
+                        <div class="workshop-card-body">
+                            <div>
+                                <h3>Advanced Woodworking </h3>
+                                <p>Custom joinery stations equipped with heavy-duty clamps, dust extraction, and precision saws.</p>
+                            </div>
+                            <a href="#" class="read-more" onclick="document.getElementById('quoteModal').classList.add('active')">View Gallery <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="workshop-card clean-card">
+                        <div class="workshop-card-img">
+                            <img src="https://tse4.mm.bing.net/th/id/OIP.b31BlnVjK_g2Yt53LQbs0gHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Professional Paint Station">
+                        </div>
+                        <div class="workshop-card-body">
+                            <div>
+                                <h3>Pro Paint & Finish Station</h3>
+                                <p>Climate-controlled mixing areas with complete color-matching spectrometers and spray booths.</p>
+                            </div>
+                            <a href="#" class="read-more" onclick="document.getElementById('quoteModal').classList.add('active')">View Gallery <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 6: PRO CONTRACTOR TIPS -->
+        <section class="section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <span class="badge"><i class="fa-solid fa-lightbulb"></i> Pro Advice</span>
+                    <h2>Master Contractor Advice</h2>
+                    <p>Quick operational best practices straight from seasoned site managers.</p>
+                </div>
+                <div class="tips-grid">
+                    <div class="tip-card clean-card">
+                        <div class="tip-icon"><i class="fa-solid fa-temperature-arrow-down"></i></div>
+                        <h3>Temperature & Curing</h3>
+                        <p>Always check ambient humidity and room temperatures before applying water or oil-based paints to prevent bubbling.</p>
+                    </div>
+                    <div class="tip-card clean-card">
+                        <div class="tip-icon"><i class="fa-solid fa-bolt"></i></div>
+                        <h3>Brush Storage Hacks</h3>
+                        <p>Wrap high-grade paint brushes in airtight plastic wrap between coats to prevent drying out during long multi-day projects.</p>
+                    </div>
+                    <div class="tip-card clean-card">
+                        <div class="tip-icon"><i class="fa-solid fa-shield-cat"></i></div>
+                        <h3>Safety Equipment Check</h3>
+                        <p>Never bypass respirator masks when sanding drywall or spraying solvent-based lacquers in enclosed areas and your surroundings.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 7: VISUAL WALKTHROUGH BANNER -->
+        <section class="section-padding">
+            <div class="container">
+                <div class="visual-banner-card">
+                    <div class="visual-banner-img">
+                        <img src="https://fpk2y8wpyto0fffq.public.blob.vercel-storage.com/wp-migrated/how-to-create-a-masterclass/fc14864b1e.png" alt="Step-by-step masterclass">
+                    </div>
+                    <div class="visual-banner-content">
+                        <span class="badge"><i class="fa-solid fa-video"></i> Masterclass Video Series</span>
+                        <h3>Step-by-Step Visual Masterclasses</h3>
+                        <p>Watch master builders break down complex renovation phases into simple, repeatable workflows with our high-definition tutorial library.</p>
+                        <ul class="visual-banner-features">
+                            <li><i class="fa-solid fa-check-circle"></i> Over 50+ hours of contractor-led video instruction</li>
+                            <li><i class="fa-solid fa-check-circle"></i> Downloadable blueprints and material checklists</li>
+                            <li><i class="fa-solid fa-check-circle"></i> Direct Q&A sessions with expert instructors</li>
+                        </ul>
+                        <button class="btn primary-btn" onclick="document.getElementById('quoteModal').classList.add('active')">Explore Masterclasses <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 8: NEWSLETTER & SUBSCRIPTION -->
+        <section class="section-padding">
+            <div class="container">
+                <div class="newsletter-banner">
+                    <span class="badge"><i class="fa-solid fa-envelope"></i> Join Community</span>
+                    <h2>Never Miss a DIY Guide or Contractor Deal</h2>
+                    <p>Join over 15,000 builders and painting enthusiasts receiving our monthly hardware insights.</p>
+                    <form class="newsletter-form-large" onsubmit="event.preventDefault(); alert('Thank you for subscribing to Tool Hub Blog!');">
+                        <input type="email" placeholder="Enter your email address" required>
+                        <button type="submit" class="btn primary-btn">Subscribe Now</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-col">
+                <a href="/blog.html" class="logo">
+                    <div class="logo-icon-wrapper">
+                        <img src="/8eee87d8-c4de-4aaa-bc48-69386eb19802.jpg" alt="Tool Hub Logo" class="logo-light">
+                        <img src="/9e8f0496-54de-43a0-b288-77802af85bac.jpg" alt="Tool Hub Logo Dark" class="logo-dark">
+                    </div>
+                    <div class="logo-content">
+                        <span class="logo-title">Tool <span>Hub</span></span>
+                        <span class="logo-subtitle">Brush & Bolt</span>
+                    </div>
+                </a>
+                <p>Your trusted partner for professional hardware and superior painting solutions.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about">About Us</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="index.html#products">Products</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Categories</h3>
+                <ul>
+                    <li><a href="index.html#products">Power Tools</a></li>
+                    <li><a href="index.html#products">Interior Paints</a></li>
+                    <li><a href="index.html#products">Safety Gear</a></li>
+                    <li><a href="index.html#products">Building Materials</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Newsletter</h3>
+                <p>Subscribe to receive updates on new products and contractor discounts.</p>
+                <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed successfully!');">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" class="btn primary-btn"><i class="fa-solid fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Tool Hub. All Rights Reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#privacy">Privacy Policy</a>
+                    <a href="#terms">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="blog.js"> </script>
+</body>
+</html>

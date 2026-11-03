@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tool Hub - Hardware & Paint Store | Home 2</title>
+
+    <link rel="icon" type="image/png" href="/8eee87d8-c4de-4aaa-bc48-69386eb19802.jpg">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="home2.css">
+</head>
+<body>
+
+    <!-- ================= HEADER / NAVBAR ================= -->
+    <header class="header" id="header">
+        <div class="container nav-container">
+            <a href="#home" class="logo">
+                <div class="logo-icon-wrapper">
+                    <img src="/8eee87d8-c4de-4aaa-bc48-69386eb19802.jpg" alt="Tool Hub Logo" class="logo-light">
+                    <img src="/9e8f0496-54de-43a0-b288-77802af85bac.jpg" alt="Tool Hub Logo Dark" class="logo-dark">
+                </div>
+                <div class="logo-content">
+                    <span class="logo-title">Tool <span>Hub</span></span>
+                    <span class="logo-subtitle">Brush & Bolt</span>
+                </div>
+            </a>
+
+            <nav class="navbar" id="navbar">
+                <ul class="nav-list">
+                    <!-- Home Dropdown Menu -->
+                    <li class="dropdown">
+                        <a href="#home" class="nav-link active">Home <i class="fa-solid fa-chevron-down" style="font-size: 0.7rem;"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/index.html">Home-1</a></li>
+                            <li><a href="/home2.html">Home-2</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/about.html" class="nav-link">About</a></li>
+                    <li><a href="/services.html" class="nav-link">Services</a></li>
+                    <li><a href="/products.html" class="nav-link">Products</a></li>
+                    <li><a href="/blog.html" class="nav-link">Blog</a></li>
+                    <li><a href="/pricing.html" class="nav-link">Pricing</a></li>
+                    <li><a href="/contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <button class="action-btn theme-toggle" id="themeToggle" title="Toggle Theme">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <button class="action-btn rtl-toggle" id="rtlToggle" title="Toggle RTL">
+                    RTL
+                </button>
+                <button class="action-btn quote-btn" id="openQuoteModal">
+                    <i class="fa-solid fa-file-lines"></i> Get a Quote
+                </button>
+                <div class="hamburger" id="hamburger">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ================= GET A QUOTE MODAL POPUP ================= -->
+    <div class="quote-modal" id="quoteModal">
+        <div class="modal-content">
+            <button class="close-modal" id="closeQuoteModal"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal-header">
+                <h3>Request a Custom Quote</h3>
+                <p>Fill out the details below and our team will get back to you with competitive pricing.</p>
+            </div>
+            <form class="modal-form" id="modalQuoteForm">
+                <div class="form-group">
+                    <input type="text" placeholder="Full Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Email Address" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" placeholder="Phone Number" required>
+                </div>
+                <div class="form-group">
+                    <select required style="width: 100%; padding: 0.9rem 1rem; background: var(--bg-color); border: 1px solid var(--border-color); border-radius: 8px; color: var(--text-color); outline: none; font-family: inherit;">
+                        <option value="" disabled selected>Select Category</option>
+                        <option value="power-tools">Power Tools & Equipment</option>
+                        <option value="paints">Paints & Color Mixing</option>
+                        <option value="building-materials">Building Materials (Bulk)</option>
+                        <option value="safety-gear">Safety Gear</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <textarea rows="4" placeholder="Describe your materials or project specifications..." required style="width: 100%; padding: 0.9rem 1rem; background: var(--bg-color); border: 1px solid var(--border-color); border-radius: 8px; color: var(--text-color); outline: none; font-family: inherit; resize: vertical;"></textarea>
+                </div>
+                <button type="submit" class="btn primary-btn full-width">Submit Quote Request</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- ================= MAIN CONTENT ================= -->
+    <main>
+
+        <!-- SECTION 1: HERO -->
+        <section class="hero-section" id="home">
+            <div class="container hero-container">
+                <div class="hero-image-wrapper reveal-left">
+                    <div class="img-glow-wrapper floating-anim">
+                        <img src="/6eb870a5-5b81-410c-b246-a9cb441cce03.jpg" alt="Hardware and Paint Store" class="hero-img">
+                    </div>
+                </div>
+                <div class="hero-content reveal-right">
+                    <span class="badge"><i class="fa-solid fa-bolt"></i> Ultimate Industrial & Home Supply</span>
+                    <h1>Equip Your Next Big Project With <span class="highlight">Excellence</span></h1>
+                    <p>Discover professional-grade hardware, precision instruments, and vibrant color palettes engineered for lasting durability and performance.</p>
+                    <div class="hero-btns">
+                        <a href="#categories" class="btn primary-btn">Browse Categories <i class="fa-solid fa-arrow-right"></i></a>
+                        <button class="btn secondary-btn" id="heroOpenQuote">Get a Quote</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: STATS -->
+        <section class="stats-section section-padding" id="statsSection">
+            <div class="container">
+                <div class="section-header reveal-up">
+                    <span class="section-badge"><i class="fa-solid fa-chart-line"></i> Store Milestones</span>
+                    <h2>Our Growth in Numbers</h2>
+                    <p>Trusted by professionals across the nation for decades.</p>
+                </div>
+                <div class="stats-grid">
+                    <div class="stat-card reveal-up" style="transition-delay: 0.1s;">
+                        <i class="fa-solid fa-users"></i>
+                        <h3 class="stat-number" data-target="25" data-suffix="k+">0</h3>
+                        <p>Happy Contractors</p>
+                    </div>
+                    <div class="stat-card reveal-up" style="transition-delay: 0.2s;">
+                        <i class="fa-solid fa-box-open"></i>
+                        <h3 class="stat-number" data-target="10" data-suffix="k+">0</h3>
+                        <p>Products In Store</p>
+                    </div>
+                    <div class="stat-card reveal-up" style="transition-delay: 0.3s;">
+                        <i class="fa-solid fa-award"></i>
+                        <h3 class="stat-number" data-target="28" data-suffix="+">0</h3>
+                        <p>Years of Trust</p>
+                    </div>
+                    <div class="stat-card reveal-up" style="transition-delay: 0.4s;">
+                        <i class="fa-solid fa-star"></i>
+                        <h3 class="stat-number" data-target="4.9" data-decimals="1">0</h3>
+                        <p>Customer Rating</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: POPULAR CATEGORIES -->
+        <section class="categories-section section-padding" id="categories">
+            <div class="container">
+                <div class="section-header reveal-up">
+                    <span class="section-badge"><i class="fa-solid fa-layer-group"></i> Catalog</span>
+                    <h2>Popular Categories</h2>
+                    <p>Find specialized tools and materials categorized for quick navigation.</p>
+                </div>
+                <div class="categories-grid">
+                    <div class="category-card reveal-up" style="transition-delay: 0.1s;">
+                        <div class="category-icon"><i class="fa-solid fa-hammer"></i></div>
+                        <h3>Heavy Power Tools</h3>
+                        <p>Drills, saws, grinders, and heavy-duty machinery for professional construction sites.</p>
+                    </div>
+                    <div class="category-card reveal-up" style="transition-delay: 0.2s;">
+                        <div class="category-icon"><i class="fa-solid fa-paint-roller"></i></div>
+                        <h3>Paints & Finishes</h3>
+                        <p>Interior, exterior, matte, and gloss coatings matched to absolute perfection.</p>
+                    </div>
+                    <div class="category-card reveal-up" style="transition-delay: 0.3s;">
+                        <div class="category-icon"><i class="fa-solid fa-shield-cat"></i></div>
+                        <h3>Safety Gear</h3>
+                        <p>Helmets, gloves, harnesses, and protective wear ensuring complete jobsite safety.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- IMAGE SECTION A: VISUAL SHOWCASE GALLERY -->
+        <section class="image-showcase-section section-padding">
+            <div class="container">
+                <div class="section-header reveal-up">
+                    <span class="section-badge"><i class="fa-solid fa-images"></i> Showroom</span>
+                    <h2>Explore Our Showroom & Workspace</h2>
+                    <p>Take a visual tour of our top-tier equipment displays and specialized mixing studios.</p>
+                </div>
+                <div class="showcase-grid">
+                    <div class="showcase-item reveal-up" style="transition-delay: 0.1s;">
+                        <div class="img-glow-wrapper">
+                            <div class="showcase-img-container">
+                                <img src="https://m.media-amazon.com/images/I/71ndT3wt-vL._SL500_.jpg" alt="Power Tools Display">
+                            </div>
+                        </div>
+                        <div class="showcase-content">
+                            <h3>Precision Cordless Tools</h3>
+                            <p>Engineered for maximum torque and battery efficiency.</p>
+                        </div>
+                    </div>
+                    <div class="showcase-item reveal-up" style="transition-delay: 0.2s;">
+                        <div class="img-glow-wrapper">
+                            <div class="showcase-img-container">
+                                <img src="https://tse2.mm.bing.net/th/id/OIP.vqLT5bZEll6goJPHRAvR0gHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Paint Studio">
+                            </div>
+                        </div>
+                        <div class="showcase-content">
+                            <h3>Custom Color Mixing</h3>
+                            <p>Over 5,000 hues matched with spectrophotometer accuracy.</p>
+                        </div>
+                    </div>
+                    <div class="showcase-item reveal-up" style="transition-delay: 0.3s;">
+                        <div class="img-glow-wrapper">
+                            <div class="showcase-img-container">
+                                <img src="https://tse3.mm.bing.net/th/id/OIP.d5_c2ldAoYtv7z_LLia0ZwHaEO?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Workshop Essentials">
+                            </div>
+                        </div>
+                        <div class="showcase-content">
+                            <h3>Woodworking & Hardware</h3>
+                            <p>Heavy-duty fasteners and structural carpentry gear.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5: WHY CHOOSE US -->
+        <section class="features-section section-padding">
+            <div class="container">
+                <div class="section-header reveal-up">
+                    <span class="section-badge"><i class="fa-solid fa-circle-check"></i> Advantages</span>
+                    <h2>Why Professionals Choose Us</h2>
+                    <p>We deliver unbeatable value, premium quality assurance, and stellar customer care.</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-box reveal-up" style="transition-delay: 0.1s;">
+                        <i class="fa-solid fa-certificate"></i>
+                        <h3>Certified Genuine Brands</h3>
+                        <p>Every tool and paint container comes directly from top manufacturers with full warranties.</p>
+                    </div>
+                    <div class="feature-box reveal-up" style="transition-delay: 0.2s;">
+                        <i class="fa-solid fa-truck-fast"></i>
+                        <h3>Express Jobsite Delivery</h3>
+                        <p>Get your bulk orders delivered straight to your location right when you need them.</p>
+                    </div>
+                    <div class="feature-box reveal-up" style="transition-delay: 0.3s;">
+                        <i class="fa-solid fa-headset"></i>
+                        <h3>Dedicated Support Team</h3>
+                        <p>Expert hardware consultants ready to assist with complex builds and color mixing.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TOOL RENTAL & LEASING -->
+        <section class="rental-section section-padding">
+            <div class="container">
+                <div class="section-header reveal-up">
+                    <span class="section-badge"><i class="fa-solid fa-wrench"></i> Leasing</span>
+                    <h2>Tool Rental & Heavy Equipment Leasing</h2>
+                    <p>Need specialized machinery for short-term projects? Rent industrial-grade equipment at affordable rates.</p>
+                </div>
+                <div class="rental-grid">
+                    <div class="rental-card reveal-up" style="transition-delay: 0.1s;">
+                        <i class="fa-solid fa-truck-monster" style="font-size: 2.5rem; color: var(--primary-color);"></i>
+                        <h3>Concrete Mixers</h3>
+                        <div class="rental-price">$45 <span>/ day</span></div>
+                        <p>Heavy-duty gas and electric cement mixers for foundations and patios.</p>
+                        <button class="btn secondary-btn full-width" onclick="document.getElementById('quoteModal').classList.add('active')">Book Rental</button>
+                    </div>
+                    <div class="rental-card reveal-up" style="transition-delay: 0.2s;">
+                        <i class="fa-solid fa-bolt" style="font-size: 2.5rem; color: var(--primary-color);"></i>
+                        <h3>Commercial Generators</h3>
+                        <div class="rental-price">$65 <span>/ day</span></div>
+                        <p>Reliable backup power generators for active remote construction work and sites.</p>
+                        <button class="btn secondary-btn full-width" onclick="document.getElementById('quoteModal').classList.add('active')">Book Rental</button>
+                    </div>
+                    <div class="rental-card reveal-up" style="transition-delay: 0.3s;">
+                        <i class="fa-solid fa-ladder-water" style="font-size: 2.5rem; color: var(--primary-color);"></i>
+                        <h3>Scaffolding Towers</h3>
+                        <div class="rental-price">$90 <span>/ week</span></div>
+                        <p>Sturdy, safety-certified modular steel scaffolding sets for high-wall work.</p>
+                        <button class="btn secondary-btn full-width" onclick="document.getElementById('quoteModal').classList.add('active')">Book Rental</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- IMAGE SECTION B: BANNER HIGHLIGHTS -->
+        <section class="image-banners-section section-padding">
+            <div class="container">
+                <div class="section-header reveal-up">
+                    <span class="section-badge"><i class="fa-solid fa-lightbulb"></i> Inspiration</span>
+                    <h2>Contractors & DIY Inspiration</h2>
+                    <p>Built for large commercial developments and weekend home transformations alike.</p>
+                </div>
+                <div class="banner-grid">
+                    <div class="banner-card reveal-left">
+                        <div class="img-glow-wrapper">
+                            <div class="banner-img-container">
+                                <img src="https://static.wixstatic.com/media/c6525b_d85902101c5043b9ac2a9eefeba47656~mv2.webp/v1/fill/w_1000,h_667,al_c,q_85,usm_0.66_1.00_0.01/c6525b_d85902101c5043b9ac2a9eefeba47656~mv2.webp" alt="Interior Remodeling">
+                            </div>
+                        </div>
+                        <div class="banner-content">
+                            <span>Renovation Season</span>
+                            <h3>Transform Your Interiors</h3>
+                            <p>Discover long-lasting matte and satin wall finishes that resist wear and tear.</p>
+                            <button class="btn primary-btn small-btn" onclick="document.getElementById('quoteModal').classList.add('active')">Shop Paints</button>
+                        </div>
+                    </div>
+                    <div class="banner-card reveal-right">
+                        <div class="img-glow-wrapper">
+                            <div class="banner-img-container">
+                                <img src="https://tse3.mm.bing.net/th/id/OIP.aGD5iTi7BCQ3wcr09ldEQAHaFj?r=0&w=800&h=600&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Pro Tools Kit">
+                            </div>
+                        </div>
+                        <div class="banner-content">
+                            <span>Pro Equipment</span>
+                            <h3>Heavy-Duty Toolsets</h3>
+                            <p>Equip your entire crew with rugged toolboxes and high-voltage cordless drills.</p>
+                            <button class="btn primary-btn small-btn" onclick="document.getElementById('quoteModal').classList.add('active')">Explore Gear</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SPECIALIZED PAINT FINISHES -->
+        <section class="paint-finishes-section section-padding">
+            <div class="container">
+                <div class="section-header reveal-up">
+                    <span class="section-badge"><i class="fa-solid fa-palette"></i> Finishes</span>
+                    <h2>Specialized Paint Finishes & Textures</h2>
+                    <p>Elevate your spaces with textured coatings, anti-mold formulas, and weather-resistant shields.</p>
+                </div>
+                <div class="paint-finishes-grid">
+                    <div class="paint-finish-card reveal-up" style="transition-delay: 0.1s;">
+                        <div class="paint-swatch" style="background-color: #3b82f6;"></div>
+                        <h3>Anti-Microbial Shield</h3>
+                        <p>Hospital-grade hygiene paint formulated to eliminate mold and bacteria.</p>
+                    </div>
+                    <div class="paint-finish-card reveal-up" style="transition-delay: 0.2s;">
+                        <div class="paint-swatch" style="background-color: #f97316;"></div>
+                        <h3>UV Weather Guard</h3>
+                        <p>Exterior acrylic coatings designed to withstand extreme sunlight and rainfall.</p>
+                    </div>
+                    <div class="paint-finish-card reveal-up" style="transition-delay: 0.3s;">
+                        <div class="paint-swatch" style="background-color: #10b981;"></div>
+                        <h3>Metallic Lustre</h3>
+                        <p>Rich, shimmering wall glazes for stunning accent walls and lobbies.</p>
+                    </div>
+                    <div class="paint-finish-card reveal-up" style="transition-delay: 0.4s;">
+                        <div class="paint-swatch" style="background-color: #64748b;"></div>
+                        <h3>Epoxy Floor Coating</h3>
+                        <p>High-gloss, chemical-resistant finish built heavy for garages and workshops.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FEATURED PRODUCT SPOTLIGHT -->
+        <section class="featured-spotlight-section section-padding">
+            <div class="container">
+                <div class="section-header reveal-up">
+                    <span class="section-badge"><i class="fa-solid fa-fire"></i> Trending</span>
+                    <h2>Featured Product Spotlight</h2>
+                    <p>Hand-picked top-performing essentials currently trending among master craftsmen.</p>
+                </div>
+                <div class="spotlight-grid">
+                    <div class="spotlight-card reveal-up" style="transition-delay: 0.1s;">
+                        <div class="img-glow-wrapper">
+                            <div class="spotlight-img-container">
+                                <img src="https://image.made-in-china.com/2f0j00njdbzFEBiNqM/20mm-Cordless-Lithium-Electric-Rotary-Hammer-Drill-with-Battery.webp" alt="Cordless Rotary Hammer Drill">
+                            </div>
+                        </div>
+                        <div class="spotlight-content">
+                            <span class="spotlight-tag">Best Seller</span>
+                            <h3>Brushless Rotary Drill</h3>
+                            <p>Delivers up to 3.0 Joules of impact energy for heavy concrete drilling.</p>
+                            <a href="#" class="spotlight-link" onclick="document.getElementById('quoteModal').classList.add('active')">View Specs <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="spotlight-card reveal-up" style="transition-delay: 0.2s;">
+                        <div class="img-glow-wrapper">
+                            <div class="spotlight-img-container">
+                                <img src="https://www.masterhaus.bg/files/products/02/03/03/0203030432-boja-interiorna-ultra-mat-9-11l-cs169-concepts-ultra-matte-baza-w4-colorstyle.jpg" alt="Premium Interior Latex Paint">
+                            </div>
+                        </div>
+                        <div class="spotlight-content">
+                            <span class="spotlight-tag">Zero VOC</span>
+                            <h3>Ultra-Matte Interior Paint</h3>
+                            <p>Washable, scrub-resistant luxury wall finish with supreme coverage.</p>
+                            <a href="#" class="spotlight-link" onclick="document.getElementById('quoteModal').classList.add('active')">View Colors <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="spotlight-card reveal-up" style="transition-delay: 0.3s;">
+                        <div class="img-glow-wrapper">
+                            <div class="spotlight-img-container">
+                                <img src="https://i5.walmartimages.com/seo/Boxo-USA-Hand-Carry-3-Drawer-Heavy-Duty-Toolbox-Black_b50a3931-abf4-4441-9570-aa75d0fbc722.3ba904bc410e774d7cb77ac43a26708a.jpeg?odnHeight=640&odnWidth=640&odnBg=FFFFFF" alt="Heavy-Duty Steel Toolbox System">
+                            </div>
+                        </div>
+                        <div class="spotlight-content">
+                            <span class="spotlight-tag">Modular</span>
+                            <h3>All-Weather Storage</h3>
+                            <p>IP65 rated water and dust seal with heavy-duty telescopic handles.</p>
+                            <a href="#" class="spotlight-link" onclick="document.getElementById('quoteModal').classList.add('active')">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA SECTION -->
+        <section class="cta-section">
+            <div class="container cta-container reveal-up">
+                <h2>Ready to Upgrade Your Toolbox & Paints?</h2>
+                <p>Join thousands of satisfied builders and homeowners who rely on Tool Hub for unmatched quality and reliability.</p>
+                <button class="btn cta-btn" onclick="document.getElementById('quoteModal').classList.add('active')">Get Started Today <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-col">
+                <a href="#home" class="logo">
+                    <div class="logo-icon-wrapper">
+                        <img src="/8eee87d8-c4de-4aaa-bc48-69386eb19802.jpg" alt="Tool Hub Logo" class="logo-light">
+                        <img src="/9e8f0496-54de-43a0-b288-77802af85bac.jpg" alt="Tool Hub Logo Dark" class="logo-dark">
+                    </div>
+                    <div class="logo-content">
+                        <span class="logo-title">Tool <span>Hub</span></span>
+                        <span class="logo-subtitle">Brush & Bolt</span>
+                    </div>
+                </a>
+                <p>Your trusted partner for professional hardware and superior painting solutions.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="/about.html">About Us</a></li>
+                    <li><a href="/services.html">Services</a></li>
+                    <li><a href="/products.html">Products</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Categories</h3>
+                <ul>
+                    <li><a href="#categories">Power Tools</a></li>
+                    <li><a href="#categories">Interior Paints</a></li>
+                    <li><a href="#categories">Safety Gear</a></li>
+                    <li><a href="#categories">Building Materials</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Newsletter</h3>
+                <p>Subscribe to receive updates on new products and contractor discounts.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" class="btn primary-btn"><i class="fa-solid fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Tool Hub. All Rights Reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#privacy">Privacy Policy</a>
+                    <a href="#terms">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="home2.js"> </script>
+</body>
+</html>

@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Plans - Tool Hub & Paint Store</title>
+
+    <link rel="icon" type="image/png" href="/8eee87d8-c4de-4aaa-bc48-69386eb19802.jpg">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS Animation Library CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="pricing.css">
+</head>
+<body>
+
+    <!-- ================= HEADER / STICKY NAVBAR ================= -->
+    <header class="header" id="header">
+        <div class="container nav-container">
+            <a href="/pricing.html" class="logo">
+                <div class="logo-icon-wrapper">
+                    <img src="/8eee87d8-c4de-4aaa-bc48-69386eb19802.jpg" alt="Tool Hub Logo" class="logo-light">
+                    <img src="/9e8f0496-54de-43a0-b288-77802af85bac.jpg" alt="Tool Hub Logo Dark" class="logo-dark">
+                </div>
+                <div class="logo-content">
+                    <span class="logo-title">Tool <span>Hub</span></span>
+                    <span class="logo-subtitle">Brush & Bolt</span>
+                </div>
+            </a>
+
+            <nav class="navbar" id="navbar">
+                <ul class="nav-list">
+                    <li class="dropdown">
+                        <a href="/index.html" class="nav-link">Home <i class="fa-solid fa-chevron-down" style="font-size: 0.7rem;"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/index.html">Home-1</a></li>
+                            <li><a href="/home2.html">Home-2</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/about.html" class="nav-link">About</a></li>
+                    <li><a href="/services.html" class="nav-link">Services</a></li>
+                    <li><a href="/products.html" class="nav-link">Products</a></li>
+                    <li><a href="/blog.html" class="nav-link">Blog</a></li>
+                    <li><a href="/pricing.html" class="nav-link active">Pricing</a></li>
+                    <li><a href="/contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <button class="action-btn theme-toggle" id="themeToggle" title="Toggle Theme">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <button class="action-btn rtl-toggle" id="rtlToggle" title="Toggle RTL">
+                    RTL
+                </button>
+                <button class="action-btn quote-btn" id="openQuoteModal">
+                    <i class="fa-solid fa-file-lines"></i> Get a Quote
+                </button>
+                <div class="hamburger" id="hamburger">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ================= GET A QUOTE MODAL POPUP ================= -->
+    <div class="quote-modal" id="quoteModal">
+        <div class="modal-content glow-border">
+            <button class="close-modal" id="closeQuoteModal"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal-header">
+                <h3>Request a Custom Quote</h3>
+                <p>Fill out the details below and our sales team will get back to you with competitive pricing.</p>
+            </div>
+            <form class="modal-form" id="modalQuoteForm">
+                <div class="form-group">
+                    <input type="text" placeholder="Full Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Email Address" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" placeholder="Phone Number" required>
+                </div>
+                <div class="form-group">
+                    <select required style="width: 100%; padding: 0.9rem 1rem; background: var(--bg-color); border: 1px solid var(--border-color); border-radius: 8px; color: var(--text-color); outline: none; font-family: inherit;">
+                        <option value="" disabled selected>Select Membership Plan / Category</option>
+                        <option value="hobbyist">DIY Hobbyist (Free)</option>
+                        <option value="contractor">Pro Contractor ($49/mo)</option>
+                        <option value="enterprise">Enterprise Builder ($199/mo)</option>
+                        <option value="custom">Custom Bulk Supply Quote</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <textarea rows="4" placeholder="Describe your team size or project requirements..." required style="width: 100%; padding: 0.9rem 1rem; background: var(--bg-color); border: 1px solid var(--border-color); border-radius: 8px; color: var(--text-color); outline: none; font-family: inherit; resize: vertical;"></textarea>
+                </div>
+                <button type="submit" class="btn primary-btn full-width">Submit Quote Request</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- ================= MAIN CONTENT ================= -->
+    <main>
+
+        <!-- PAGE HERO WITH RIGHT IMAGE -->
+        <section class="page-hero">
+            <div class="container">
+                <div class="hero-grid">
+                    <div class="hero-content" data-aos="fade-right" data-aos-duration="1000">
+                        <span class="badge"><i class="fa-solid fa-bullseye"></i> Cost-Plus Pricing</span>
+                        <h1>Flexible Plans for Every <span>Builder</span></h1>
+                        <p>Unlock exclusive contractor discounts, priority custom color matching, and free jobsite delivery with our professional tiers.</p>
+                        <div style="display: flex; gap: 1rem; align-items: center;">
+                            <a href="#pricing-plans" class="btn primary-btn">View Plans <i class="fa-solid fa-arrow-down"></i></a>
+                            <button class="btn hero-quote-btn" id="heroOpenQuote">Get a Quote</button>
+                        </div>
+                    </div>
+                    <div class="hero-image-wrapper glow-border" data-aos="fade-left" data-aos-duration="1000">
+                        <img src="https://img.freepik.com/premium-photo/3d-illustration-toolbox-full-construction-tools-dark-background_627050-17136.jpg" alt="Professional Builder Contractor Equipment">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- NEW IMAGE SECTION 1: CUSTOM PAINT COLOR LAB -->
+        <section class="custom-section">
+            <div class="container">
+                <div class="paint-studio-grid">
+                    <div class="paint-gallery" data-aos="zoom-in" data-aos-duration="1000">
+                        <div class="paint-img-card glow-border">
+                            <img src="https://mluyhbyhtgfn.i.optimole.com/cb:L-ig.2f077/w:800/h:534/q:mauto/f:best/https://globalfinishing.com/wp-content/uploads/unnamed-file.Pages/Products/Mixing-amp-Storage/Industrial-Paint-Mix-Room/Industrial-PaintMixRoon-Techs-Mixing.jpg" alt="Precision Paint Mixing Lab">
+                        </div>
+                        <div class="paint-img-card glow-border" style="transform: translateY(20px);">
+                            <img src="https://paintstrategies.com/wp-content/uploads/2022/04/Primer-for-Walls.jpg" alt="Professional Painter Applying Finish">
+                        </div>
+                    </div>
+                    <div class="paint-studio-info" data-aos="fade-up" data-aos-duration="1000">
+                        <span class="badge"><i class="fa-solid fa-palette"></i> Expert Color Matching</span>
+                        <h3>State-of-the-Art Color Lab & Mixing Studio</h3>
+                        <p>Match any swatch, fabric sample, or historical paint color with spectrophotometer accuracy in under 60 seconds. Pro and Enterprise members get priority batching and custom sheens.</p>
+                        <div class="studio-features">
+                            <div class="studio-feature-item">
+                                <i class="fa-solid fa-check"></i> Digital Spectrophotometer Color Matching
+                            </div>
+                            <div class="studio-feature-item">
+                                <i class="fa-solid fa-check"></i> Low-VOC Interior & Exterior Formulations
+                            </div>
+                            <div class="studio-feature-item">
+                                <i class="fa-solid fa-check"></i> Bulk Jobsite Tinting & Delivery
+                            </div>
+                        </div>
+                        <button class="btn primary-btn" onclick="document.getElementById('quoteModal').classList.add('active')">Learn More About Paint Services</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 1: PRICING TIERS -->
+        <section class="custom-section" id="pricing-plans">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up" data-aos-duration="800">
+                    <span class="badge"><i class="fa-solid fa-tags"></i> Pricing Tiers</span>
+                    <h2>Choose Your Membership Plan</h2>
+                    <p>Select the tier that matches your project scale and volume.</p>
+                </div>
+                <div class="pricing-grid">
+                    <div class="pricing-card glow-border" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+                        <h3>DIY Hobbyist</h3>
+                        <div class="price-tag">$0 <span>/ month</span></div>
+                        <ul class="pricing-features">
+                            <li><i class="fa-solid fa-check"></i> Standard Store Pricing</li>
+                            <li><i class="fa-solid fa-check"></i> Basic Color Matching</li>
+                            <li><i class="fa-solid fa-xmark"></i> Bulk Order Discounts</li>
+                            <li><i class="fa-solid fa-xmark"></i> Free Jobsite Delivery</li>
+                        </ul>
+                        <button class="btn secondary-btn full-width" onclick="document.getElementById('quoteModal').classList.add('active')">Get Started</button>
+                    </div>
+                    <div class="pricing-card popular glow-border" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                        <span class="pop-badge">Best Value</span>
+                        <h3>Pro Contractor</h3>
+                        <div class="price-tag">$49 <span>/ month</span></div>
+                        <ul class="pricing-features">
+                            <li><i class="fa-solid fa-check"></i> 15% Off All Hardware</li>
+                            <li><i class="fa-solid fa-check"></i> Priority Color Mixing</li>
+                            <li><i class="fa-solid fa-check"></i> Free Jobsite Delivery</li>
+                            <li><i class="fa-solid fa-check"></i> Tool Repair Support</li>
+                        </ul>
+                        <button class="btn primary-btn full-width" onclick="document.getElementById('quoteModal').classList.add('active')">Join Pro Club</button>
+                    </div>
+                    <div class="pricing-card glow-border" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+                        <h3>Enterprise Builder</h3>
+                        <div class="price-tag">$199 <span>/ month</span></div>
+                        <ul class="pricing-features">
+                            <li><i class="fa-solid fa-check"></i> 25% Off Bulk Orders</li>
+                            <li><i class="fa-solid fa-check"></i> Dedicated Account Manager</li>
+                            <li><i class="fa-solid fa-check"></i> 24/7 Emergency Pickup</li>
+                            <li><i class="fa-solid fa-check"></i> Extended Credit Terms</li>
+                        </ul>
+                        <button class="btn secondary-btn full-width" onclick="document.getElementById('quoteModal').classList.add('active')">Contact Sales</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: DETAILED PLAN COMPARISON TABLE -->
+        <section class="custom-section">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up" data-aos-duration="800">
+                    <span class="badge"><i class="fa-solid fa-sliders"></i> Side-by-Side</span>
+                    <h2>Feature Comparison</h2>
+                    <p>Compare plans side-by-side to find the right fit for your team.</p>
+                </div>
+                <div class="comparison-table-wrapper glow-border" data-aos="fade-up" data-aos-duration="1000">
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Features</th>
+                                <th>DIY Hobbyist</th>
+                                <th>Pro Contractor</th>
+                                <th>Enterprise Builder</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Hardware Store Discounts</td>
+                                <td><i class="fa-solid fa-xmark"></i></td>
+                                <td>15% Off</td>
+                                <td>25% Off</td>
+                            </tr>
+                            <tr>
+                                <td>Custom Paint Color Matching</td>
+                                <td>Standard</td>
+                                <td>Priority Lane</td>
+                                <td>Express & Custom Lab</td>
+                            </tr>
+                            <tr>
+                                <td>Jobsite Delivery</td>
+                                <td>Standard Rates</td>
+                                <td>Free (Orders $150+)</td>
+                                <td>Free (Unlimited)</td>
+                            </tr>
+                            <tr>
+                                <td>Dedicated Support Manager</td>
+                                <td><i class="fa-solid fa-xmark"></i></td>
+                                <td><i class="fa-solid fa-xmark"></i></td>
+                                <td><i class="fa-solid fa-check"></i></td>
+                            </tr>
+                            <tr>
+                                <td>Tool Repair & Maintenance</td>
+                                <td>Standard Queue</td>
+                                <td>Priority Service</td>
+                                <td>Instant Replacement Loaners</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- NEW IMAGE SECTION 2: ON-SITE FULFILLMENT SPOTLIGHT -->
+        <section class="custom-section">
+            <div class="container">
+                <div class="fulfillment-grid">
+                    <div class="fulfillment-content" data-aos="fade-right" data-aos-duration="1000">
+                        <span class="badge"><i class="fa-solid fa-truck-fast"></i> Fast Logistics</span>
+                        <h3>Direct-to-Jobsite Delivery Fleet</h3>
+                        <p>Never lose hours of productivity driving back and forth for materials. Our dedicated delivery trucks bring ladders, bulk paint buckets, and heavy tools directly to your active worksite.</p>
+                        <div class="fulfillment-stats">
+                            <div class="stat-box glow-border">
+                                <h4>2 Hrs</h4>
+                                <p>Average Rush Dispatch</p>
+                            </div>
+                            <div class="stat-box glow-border">
+                                <h4>100%</h4>
+                                <p>Damage-Free Guarantee</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fulfillment-image glow-border" data-aos="fade-left" data-aos-duration="1000">
+                        <img src="https://cdn.marblism.com/apz3gnu0n9G.webp" alt="Jobsite Material Delivery Truck">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- NEWLY ADDED IMAGE SECTION 3: TOOL REPAIR & LOANER FLEET -->
+        <section class="custom-section">
+            <div class="container">
+                <div class="repair-fleet-grid">
+                    <div class="repair-fleet-image glow-border" data-aos="fade-right" data-aos-duration="1000">
+                        <img src="https://tse1.mm.bing.net/th/id/OIP.qKWGFZEDWoYB80ExJxBblgHaEJ?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Professional Tool Repair and Maintenance">
+                    </div>
+                    <div class="repair-fleet-content" data-aos="fade-left" data-aos-duration="1000">
+                        <span class="badge"><i class="fa-solid fa-screwdriver-wrench"></i> Zero Downtime Guarantee</span>
+                        <h3>On-Site Tool Maintenance & Loaner Fleet</h3>
+                        <p>Equipment failure shouldn't halt your crew. Our factory-certified technicians service major power tool brands, and Pro/Enterprise accounts receive immediate backup tool loaners while yours are in the shop.</p>
+                        <div class="repair-features">
+                            <div class="repair-feature-box">
+                                <i class="fa-solid fa-circle-check"></i>
+                                <span>Certified Brand Repair Technicians</span>
+                            </div>
+                            <div class="repair-feature-box">
+                                <i class="fa-solid fa-circle-check"></i>
+                                <span>Instant Backup Loaner Program</span>
+                            </div>
+                            <div class="repair-feature-box">
+                                <i class="fa-solid fa-circle-check"></i>
+                                <span>OEM Parts & Calibration Labs</span>
+                            </div>
+                            <div class="repair-feature-box">
+                                <i class="fa-solid fa-circle-check"></i>
+                                <span>Priority Turnaround Service</span>
+                            </div>
+                        </div>
+                        <button class="btn primary-btn" onclick="document.getElementById('quoteModal').classList.add('active')">Explore Tool Maintenance</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5: CALL TO ACTION (CTA) -->
+        <section class="custom-section cta-section">
+            <div class="container">
+                <div class="cta-box glow-border" data-aos="zoom-in" data-aos-duration="1000">
+                    <span class="badge"><i class="fa-solid fa-rocket"></i> Get Started</span>
+                    <h2>Ready to Elevate Your Projects?</h2>
+                    <p>Join hundreds of professional contractors and builders who trust Tool Hub for their daily hardware and paint supplies.</p>
+                    <div class="cta-btns">
+                        <button class="btn primary-btn" onclick="document.getElementById('quoteModal').classList.add('active')">Register for Pro Access <i class="fa-solid fa-arrow-right"></i></button>
+                        <button class="btn secondary-btn" onclick="document.getElementById('quoteModal').classList.add('active')">Contact Store Sales</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-col" data-aos="fade-up" data-aos-duration="600">
+                <a href="/pricing.html" class="logo">
+                    <div class="logo-icon-wrapper">
+                        <img src="/8eee87d8-c4de-4aaa-bc48-69386eb19802.jpg" alt="Tool Hub Logo" class="logo-light">
+                        <img src="/9e8f0496-54de-43a0-b288-77802af85bac.jpg" alt="Tool Hub Logo Dark" class="logo-dark">
+                    </div>
+                    <div class="logo-content">
+                        <span class="logo-title">Tool <span>Hub</span></span>
+                        <span class="logo-subtitle">Brush & Bolt</span>
+                    </div>
+                </a>
+                <p>Your trusted partner for professional hardware and superior painting solutions.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-col" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="index.html#about">About Us</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="index.html#products">Products</a></li>
+                </ul>
+            </div>
+            <div class="footer-col" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
+                <h3>Categories</h3>
+                <ul>
+                    <li><a href="index.html#products">Power Tools</a></li>
+                    <li><a href="index.html#products">Interior Paints</a></li>
+                    <li><a href="index.html#products">Safety Gear</a></li>
+                    <li><a href="index.html#products">Building Materials</a></li>
+                </ul>
+            </div>
+            <div class="footer-col" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">
+                <h3>Newsletter</h3>
+                <p>Subscribe to receive updates on new products and contractor discounts.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" class="btn primary-btn"><i class="fa-solid fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Tool Hub. All Rights Reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#privacy">Privacy Policy</a>
+                    <a href="#terms">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS Animation Library JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="pricing.js"></script>
+</body>
+</html>

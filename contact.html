@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Tool Hub & Paint Store</title>
+
+    <link rel="icon" type="image/png" href="/8eee87d8-c4de-4aaa-bc48-69386eb19802.jpg">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+
+    <!-- ================= HEADER / NAVBAR ================= -->
+    <header class="header" id="header">
+        <div class="container nav-container">
+            <a href="/contact.html" class="logo">
+                <div class="logo-icon-wrapper">
+                    <img src="/8eee87d8-c4de-4aaa-bc48-69386eb19802.jpg" alt="Tool Hub Logo" class="logo-light">
+                    <img src="/9e8f0496-54de-43a0-b288-77802af85bac.jpg" alt="Tool Hub Logo Dark" class="logo-dark">
+                </div>
+                <div class="logo-content">
+                    <span class="logo-title">Tool <span>Hub</span></span>
+                    <span class="logo-subtitle">Brush & Bolt</span>
+                </div>
+            </a>
+
+            <nav class="navbar" id="navbar">
+                <ul class="nav-list">
+                    <li class="dropdown">
+                        <a href="/index.html" class="nav-link">Home <i class="fa-solid fa-chevron-down" style="font-size: 0.7rem;"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/index.html">Home-1</a></li>
+                            <li><a href="/home2.html">Home-2</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/about.html" class="nav-link">About</a></li>
+                    <li><a href="/services.html" class="nav-link">Services</a></li>
+                    <li><a href="/products.html" class="nav-link">Products</a></li>
+                    <li><a href="/blog.html" class="nav-link">Blog</a></li>
+                    <li><a href="/pricing.html" class="nav-link">Pricing</a></li>
+                    <li><a href="/contact.html" class="nav-link active">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <button class="action-btn theme-toggle" id="themeToggle" title="Toggle Theme">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <button class="action-btn rtl-toggle" id="rtlToggle" title="Toggle RTL">
+                    RTL
+                </button>
+                <button class="action-btn quote-btn" id="openQuoteModal">
+                    <i class="fa-solid fa-file-lines"></i> Get a Quote
+                </button>
+                <div class="hamburger" id="hamburger">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ================= GET A QUOTE MODAL POPUP ================= -->
+    <div class="quote-modal" id="quoteModal">
+        <div class="modal-content clean-border">
+            <button class="close-modal" id="closeQuoteModal"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal-header">
+                <h3>Request a Custom Quote</h3>
+                <p>Fill out the details below and our team will get back to you with competitive pricing.</p>
+            </div>
+            <form class="modal-form" id="modalQuoteForm">
+                <div class="form-group">
+                    <input type="text" placeholder="Full Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Email Address" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" placeholder="Phone Number" required>
+                </div>
+                <div class="form-group">
+                    <select required style="width: 100%; padding: 0.9rem 1rem; background: var(--bg-color); border: 1px solid var(--border-color); border-radius: 8px; color: var(--text-color); outline: none; font-family: inherit;">
+                        <option value="" disabled selected>Select Category</option>
+                        <option value="power-tools">Power Tools & Equipment</option>
+                        <option value="paints">Paints & Color Mixing</option>
+                        <option value="building-materials">Building Materials (Bulk)</option>
+                        <option value="safety-gear">Safety Gear</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <textarea rows="4" placeholder="Describe your materials or project specifications..." required style="width: 100%; padding: 0.9rem 1rem; background: var(--bg-color); border: 1px solid var(--border-color); border-radius: 8px; color: var(--text-color); outline: none; font-family: inherit; resize: vertical;"></textarea>
+                </div>
+                <button type="submit" class="btn primary-btn full-width">Submit Quote Request</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- ================= MAIN CONTENT ================= -->
+    <main>
+
+        <!-- HERO SECTION -->
+        <section class="contact-hero">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <span class="badge"><i class="fa-solid fa-headset"></i> 24/7 Dedicated Support</span>
+                    <h1>We Are Here To Help Your <span class="highlight">Projects</span> Succeed</h1>
+                    <p>Get in touch with our hardware experts, paint color matching specialists, or contractor support team instantly.</p>
+                    <div class="hero-btns" style="display: flex; gap: 1rem;">
+                        <a href="#contact-form-sec" class="btn primary-btn clean-border">Send Message <i class="fa-solid fa-arrow-down"></i></a>
+                    </div>
+                </div>
+                <div class="hero-image-wrapper">
+                    <img src="/b1456707-c3ae-4d8a-b1e9-ee73406b43c7.jpg" alt="Contact Us Hero" class="hero-img clean-border">
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 1: CONTACT FORM & INFO -->
+        <section class="section-padding animate-on-scroll" id="contact-form-sec">
+            <div class="container">
+                <div class="section-header">
+                    <span class="badge"><i class="fa-solid fa-envelope-open-text"></i> Get In Touch</span>
+                    <h2>Send Us A Message</h2>
+                    <p>Fill out the form below and our team will get back to you within 2 hours.</p>
+                </div>
+                <div class="contact-grid">
+                    <div class="contact-info clean-border">
+                        <h3>Showroom HQ</h3>
+                        <p><i class="fa-solid fa-location-dot"></i> 123 Industrial Parkway, Hardware City, HC 90210</p>
+                        <p><i class="fa-solid fa-phone"></i> +1 (555) 839-2000</p>
+                        <p><i class="fa-solid fa-envelope"></i> support@toolhubstore.com</p>
+                        <p><i class="fa-solid fa-clock"></i> Mon - Sat: 7:00 AM - 7:00 PM</p>
+                    </div>
+                    <form class="contact-form clean-border" id="contactForm">
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <select required>
+                                <option value="" disabled selected>Select Inquiry Subject</option>
+                                <option value="tools">Power Tools & Hardware</option>
+                                <option value="paint">Custom Paint Matching</option>
+                                <option value="contractor">Contractor & Bulk Pricing</option>
+                                <option value="other">General Query</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea rows="5" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn primary-btn full-width">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: STORE LOCATIONS -->
+        <section class="section-padding animate-on-scroll">
+            <div class="container">
+                <div class="section-header">
+                    <span class="badge"><i class="fa-solid fa-map-location-dot"></i> Branch Network</span>
+                    <h2>Our Store Locations</h2>
+                    <p>Find a Tool Hub branch near you for in-person pickups and paint blending.</p>
+                </div>
+                <div class="locations-grid">
+                    <div class="location-card clean-border">
+                        <div class="location-icon"><i class="fa-solid fa-store"></i></div>
+                        <h3>Downtown Central Branch</h3>
+                        <p>458 Market St, Hardware City, HC 90211</p>
+                        <button class="btn secondary-btn small-btn" onclick="document.getElementById('quoteModal').classList.add('active')">Get Directions</button>
+                    </div>
+                    <div class="location-card clean-border">
+                        <div class="location-icon"><i class="fa-solid fa-warehouse"></i></div>
+                        <h3>North Industrial Hub</h3>
+                        <p>123 Industrial Parkway, HC 90210</p>
+                        <button class="btn secondary-btn small-btn" onclick="document.getElementById('quoteModal').classList.add('active')">Get Directions</button>
+                    </div>
+                    <div class="location-card clean-border">
+                        <div class="location-icon"><i class="fa-solid fa-shop"></i></div>
+                        <h3>Westside Builders Outlet</h3>
+                        <p>789 Sunset Blvd, HC 90215</p>
+                        <button class="btn secondary-btn small-btn" onclick="document.getElementById('quoteModal').classList.add('active')">Get Directions</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- STORE MAP & BRANCH LOCATOR SECTION -->
+        <section class="section-padding animate-on-scroll">
+            <div class="container">
+                <div class="section-header">
+                    <span class="badge"><i class="fa-solid fa-compass"></i> Branch Locator</span>
+                    <h2>Interactive Store Map Explorer</h2>
+                    <p>Select any regional branch below to update the interactive map coordinates instantly.</p>
+                </div>
+                <div class="store-map-layout clean-border">
+                    <div class="branch-selector-list">
+                        <div class="branch-item active" onclick="switchMapLocation(this, 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509374!2d144.9537363153169!3d-37.81627974202166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577d6f31f98d4d!2sMarket%20St%2C%20Melbourne%20VIC%203000%2C%20Australia!5e0!3m2!1sen!2sus!4v1650000000000!5m2!1sen!2sus')">
+                            <h4>Downtown Central Store <span>HQ</span></h4>
+                            <p>458 Market St, Hardware City, HC 90211</p>
+                        </div>
+                        <div class="branch-item" onclick="switchMapLocation(this, 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387190.2799160892!2d-74.25987368715491!3d40.69767006782373!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sus!4v1650000000000!5m2!1sen!2sus')">
+                            <h4>North Industrial Hub <span>Warehouse</span></h4>
+                            <p>123 Industrial Parkway, HC 90210</p>
+                        </div>
+                        <div class="branch-item" onclick="switchMapLocation(this, 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3305.7144399778216!2d-118.24368492348574!3d34.05223421773953!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c648fa1fb4bc%3A0x213e8347f9349e5d!2sLos%20Angeles%2C%20CA%2C%20USA!5e0!3m2!1sen!2sus!4v1650000000000!5m2!1sen!2sus')">
+                            <h4>Westside Builders Outlet <span>Retail</span></h4>
+                            <p>789 Sunset Blvd, HC 90215</p>
+                        </div>
+                    </div>
+                    <div class="map-frame-box">
+                        <iframe id="storeMapFrame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509374!2d144.9537363153169!3d-37.81627974202166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577d6f31f98d4d!2sMarket%20St%2C%20Melbourne%20VIC%203000%2C%20Australia!5e0!3m2!1sen!2sus!4v1650000000000!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: DEPARTMENT EXTENSIONS -->
+        <section class="section-padding animate-on-scroll">
+            <div class="container">
+                <div class="section-header">
+                    <span class="badge"><i class="fa-solid fa-sitemap"></i> Direct Dials</span>
+                    <h2>Department Extensions</h2>
+                    <p>Call our internal desks directly for faster resolution.</p>
+                </div>
+                <div class="departments-grid">
+                    <div class="dept-card clean-border">
+                        <i class="fa-solid fa-paint-roller"></i>
+                        <h4>Paint Studio</h4>
+                        <p>Ext. 101</p>
+                    </div>
+                    <div class="dept-card clean-border">
+                        <i class="fa-solid fa-hammer"></i>
+                        <h4>Power Tools</h4>
+                        <p>Ext. 102</p>
+                    </div>
+                    <div class="dept-card clean-border">
+                        <i class="fa-solid fa-hard-hat"></i>
+                        <h4>Contractor Desk</h4>
+                        <p>Ext. 103</p>
+                    </div>
+                    <div class="dept-card clean-border">
+                        <i class="fa-solid fa-file-invoice-dollar"></i>
+                        <h4>Billing & Accounts</h4>
+                        <p>Ext. 104</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- INTERACTIVE PAINT VISUALIZER -->
+        <section class="section-padding animate-on-scroll">
+            <div class="container">
+                <div class="section-header">
+                    <span class="badge"><i class="fa-solid fa-palette"></i> Color Studio</span>
+                    <h2>Interactive Paint Visualizer</h2>
+                    <p>Preview popular color tones live on interior spaces before placing your paint order.</p>
+                </div>
+                <div class="visualizer-container clean-border">
+                    <div class="visualizer-display">
+                        <img src="https://images.livspace-cdn.com/w:3840/plain/https://d3gq2merok8n5r.cloudfront.net/abhinav/ond-1634120396-Obfdc/1-2025-1736068988-NDPD1/amj-1743406946-9EQzZ/wallpaint-1743672536-8RVUj/wp-2-1743672548-WsfCG.jpg" alt="Room Paint Visualizer">
+                        <div class="color-overlay" id="colorOverlay"></div>
+                    </div>
+                    <div class="visualizer-controls">
+                        <h3>Select Accent Tone</h3>
+                        <p>Click any color swatch below to dynamically tint our showcase room wall sample in real-time.</p>
+                        <div class="color-palette">
+                            <button class="color-btn active" style="background-color: #3b82f6;" data-color="#3b82f6" title="Pacific Blue"></button>
+                            <button class="color-btn" style="background-color: #f97316;" data-color="#f97316" title="Hardware Orange"></button>
+                            <button class="color-btn" style="background-color: #10b981;" data-color="#10b981" title="Forest Green"></button>
+                            <button class="color-btn" style="background-color: #6366f1;" data-color="#6366f1" title="Royal Indigo"></button>
+                            <button class="color-btn" style="background-color: #f43f5e;" data-color="#f43f5e" title="Crimson Red"></button>
+                        </div>
+                        <button class="btn primary-btn" style="margin-top: 1rem; width: fit-content;" onclick="document.getElementById('quoteModal').classList.add('active')">Order Custom Color Sample</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ SECTION -->
+        <section class="section-padding animate-on-scroll">
+            <div class="container">
+                <div class="section-header">
+                    <span class="badge"><i class="fa-solid fa-circle-question"></i> Help Center</span>
+                    <h2>Frequently Asked Questions</h2>
+                    <p>Comprehensive answers regarding contractor accounts, orders, warranties, and bulk shipping.</p>
+                </div>
+                <div class="faq-accordion-container">
+                    <div class="faq-card clean-border open">
+                        <div class="faq-card-header">
+                            <span>How do I set up a commercial contractor account for bulk discounts?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-card-body">
+                            You can apply online via our Pricing page or visit our Contractor Desk (Ext. 103) with your business license. Approved contractors receive tiered volume discounts, net-30 payment terms, and dedicated project manager assignment.
+                        </div>
+                    </div>
+                    <div class="faq-card clean-border">
+                        <div class="faq-card-header">
+                            <span>Are custom mixed paint formulas guaranteed for color matching accuracy?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-card-body">
+                            Yes! Our digital spectrophotometer color-matching technology guarantees precision. If your custom blend does not match your physical swatch under natural lighting conditions, we will re-blend or refund your paint order free of charge.
+                        </div>
+                    </div>
+                    <div class="faq-card clean-border">
+                        <div class="faq-card-header">
+                            <span>What are your guidelines for heavy building material and pallet deliveries?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-card-body">
+                            Pallet and heavy building supplies are delivered via our flatbed fleet equipped with hydraulic liftgates. Jobsite drop-off requests must specify accessibility for heavy commercial vehicles. Same-day delivery is available for orders confirmed before 12:00 PM.
+                        </div>
+                    </div>
+                    <div class="faq-card clean-border">
+                        <div class="faq-card-header">
+                            <span>What warranty options are included with industrial power tool purchases?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-card-body">
+                            All professional-grade power tools carry manufacturer warranties ranging from 1 to 5 years. Additionally, Tool Hub offers an optional extended replacement warranty plan covering accidental jobsite damage and routine calibration maintenance.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SUPPORT HOURS & EMERGENCY PICKUP -->
+        <section class="section-padding animate-on-scroll">
+            <div class="container">
+                <div class="support-banner clean-border">
+                    <span class="badge"><i class="fa-solid fa-triangle-exclamation"></i> Emergency Service</span>
+                    <h3>Need Emergency Contractor Pickup?</h3>
+                    <p>Enterprise members enjoy 24/7 secure locker pickup options for critical after-hours materials. Contact our sales department to activate your keycard access.</p>
+                    <a href="tel:5558392000" class="btn primary-btn"><i class="fa-solid fa-phone"></i> Call Emergency Hotline</a>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-col">
+                <a href="/contact.html" class="logo">
+                    <div class="logo-icon-wrapper">
+                        <img src="/8eee87d8-c4de-4aaa-bc48-69386eb19802.jpg" alt="Tool Hub Logo" class="logo-light">
+                        <img src="/9e8f0496-54de-43a0-b288-77802af85bac.jpg" alt="Tool Hub Logo Dark" class="logo-dark">
+                    </div>
+                    <div class="logo-content">
+                        <span class="logo-title">Tool <span>Hub</span></span>
+                        <span class="logo-subtitle">Brush & Bolt</span>
+                    </div>
+                </a>
+                <p>Your trusted partner for professional hardware and superior painting solutions.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about">About Us</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="index.html#products">Products</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Categories</h3>
+                <ul>
+                    <li><a href="index.html#products">Power Tools</a></li>
+                    <li><a href="index.html#products">Interior Paints</a></li>
+                    <li><a href="index.html#products">Safety Gear</a></li>
+                    <li><a href="index.html#products">Building Materials</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Newsletter</h3>
+                <p>Subscribe to receive updates on new products and contractor discounts.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" class="btn primary-btn"><i class="fa-solid fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Tool Hub. All Rights Reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#privacy">Privacy Policy</a>
+                    <a href="#terms">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="contact.js"> </script>
+</body>
+</html>

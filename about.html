@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Tool Hub | Hardware & Paint Store</title>
+
+    <link rel="icon" type="image/png" href="/8eee87d8-c4de-4aaa-bc48-69386eb19802.jpg">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="about.css">
+</head>
+<body>
+
+    <!-- ================= HEADER / NAVBAR ================= -->
+    <header class="header" id="header">
+        <div class="container nav-container">
+            <a href="/about.html" class="logo">
+                <div class="logo-icon-wrapper">
+                    <img src="/8eee87d8-c4de-4aaa-bc48-69386eb19802.jpg" alt="Tool Hub Logo" class="logo-light">
+                    <img src="/9e8f0496-54de-43a0-b288-77802af85bac.jpg" alt="Tool Hub Logo Dark" class="logo-dark">
+                </div>
+                <div class="logo-content">
+                    <span class="logo-title">Tool <span>Hub</span></span>
+                    <span class="logo-subtitle">Brush & Bolt</span>
+                </div>
+            </a>
+
+            <nav class="navbar" id="navbar">
+                <ul class="nav-list">
+                    <li class="dropdown">
+                        <a href="/index.html" class="nav-link">Home <i class="fa-solid fa-chevron-down" style="font-size: 0.7rem;"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/index.html">Home-1</a></li>
+                            <li><a href="/home2.html">Home-2</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/about.html" class="nav-link active">About</a></li>
+                    <li><a href="/services.html" class="nav-link">Services</a></li>
+                    <li><a href="/products.html" class="nav-link">Products</a></li>
+                    <li><a href="/blog.html" class="nav-link">Blog</a></li>
+                    <li><a href="/pricing.html" class="nav-link">Pricing</a></li>
+                    <li><a href="/contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <button class="action-btn theme-toggle" id="themeToggle" title="Toggle Theme">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <button class="action-btn rtl-toggle" id="rtlToggle" title="Toggle RTL">
+                    RTL
+                </button>
+                <button class="action-btn quote-btn" id="openQuoteModal">
+                    <i class="fa-solid fa-file-lines"></i> Get a Quote
+                </button>
+                <div class="hamburger" id="hamburger">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ================= GET A QUOTE MODAL POPUP ================= -->
+    <div class="quote-modal" id="quoteModal">
+        <div class="modal-content clean-card">
+            <button class="close-modal" id="closeQuoteModal"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal-header">
+                <h3>Request a Custom Quote</h3>
+                <p>Fill out the details below and our team will get back to you with competitive pricing.</p>
+            </div>
+            <form class="modal-form" id="modalQuoteForm">
+                <div class="form-group">
+                    <input type="text" placeholder="Full Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Email Address" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" placeholder="Phone Number" required>
+                </div>
+                <div class="form-group">
+                    <select required>
+                        <option value="" disabled selected>Select Category</option>
+                        <option value="power-tools">Power Tools & Equipment</option>
+                        <option value="paints">Paints & Color Mixing</option>
+                        <option value="building-materials">Building Materials (Bulk)</option>
+                        <option value="safety-gear">Safety Gear</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <textarea rows="4" placeholder="Describe your materials or project specifications..." required></textarea>
+                </div>
+                <button type="submit" class="btn primary-btn full-width">Submit Quote Request</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- ================= MAIN ABOUT PAGE CONTENT ================= -->
+    <main>
+
+        <!-- PAGE HERO WITH RIGHT-SIDE IMAGE -->
+        <section class="page-hero">
+            <div class="container">
+                <div class="hero-grid">
+                    <div class="hero-content">
+                        <span class="badge"><i class="fa-solid fa-shield-halved"></i> Crafting Excellence Since 1998</span>
+                        <h1>Engineering Trust, <span class="highlight">Coloring</span> Lives</h1>
+                        <p>Discover the journey, values, and dedication that make Tool Hub your ultimate partner in construction, remodeling, and painting supplies.</p>
+                        <div class="hero-actions">
+                            <a href="/products.html#catalog" class="btn primary-btn">Explore Products <i class="fa-solid fa-arrow-right"></i></a>
+                            <button class="btn secondary-btn hero-quote-btn" id="heroOpenQuote">Get a Quote</button>
+                        </div>
+                    </div>
+                    <div class="hero-image-wrapper">
+                        <div class="page-hero-img image-frame">
+                            <img src="https://tse1.mm.bing.net/th/id/OIP.kNaFrC_-tUU-prkPNchwjAHaE8?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Tool Hub Modern Hardware Showroom">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 1: OUR STORY -->
+        <section class="section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <span class="badge"><i class="fa-solid fa-book-open"></i> Company Background</span>
+                    <h2>Our Story</h2>
+                    <p>How we started and where we are heading.</p>
+                </div>
+                <div class="story-grid">
+                    <div class="story-img image-frame">
+                        <img src="https://th.bing.com/th/id/OIP.41jxXgqbzWSqTs5dkyc33AHaE-?r=0&o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Our Store History">
+                    </div>
+                    <div class="story-content">
+                        <h3>Rooted in Quality & Hard Work</h3>
+                        <p>Founded over two decades ago as a modest hardware counter, Tool Hub started with a single mission: to provide trade professionals and homeowners access to industrial-grade tools and superior interior-exterior paint selections that stand the test of time.</p>
+                        <p>Today, we have grown into a premier regional showroom offering computerized color-matching studios, expert maintenance workshops, and a dedicated commercial fulfillment fleet.</p>
+                        <button class="btn primary-btn" onclick="document.getElementById('quoteModal').classList.add('active')">Get a Quick Quote</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: MISSION & VISION -->
+        <section class="section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <span class="badge"><i class="fa-solid fa-compass"></i> Purpose & Direction</span>
+                    <h2>Our Mission & Vision</h2>
+                    <p>What drives us forward every single day.</p>
+                </div>
+                <div class="mission-grid">
+                    <div class="mission-card clean-card">
+                        <i class="fa-solid fa-bullseye"></i>
+                        <h3>Our Mission</h3>
+                        <p>To supply reliable, certified equipment and high-performance finishes while delivering unmatched technical expertise and personalized service to every single builder and creator.</p>
+                    </div>
+                    <div class="mission-card clean-card">
+                        <i class="fa-solid fa-eye"></i>
+                        <h3>Our Vision</h3>
+                        <p>To become the most dependable and customer-centric hardware and paint destination nationwide, recognized for quality assurance and continuous support of community trades.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: CORE VALUES (FLIP CARDS) -->
+        <section class="section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <span class="badge"><i class="fa-solid fa-heart"></i> Guiding Principles</span>
+                    <h2>Our Core Values</h2>
+                    <p>Hover over the cards to reveal what guides our everyday operations.</p>
+                </div>
+                <div class="values-grid">
+                    
+                    <!-- Flip Card 1 -->
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front clean-card">
+                                <div class="value-icon"><i class="fa-solid fa-gem"></i></div>
+                                <h3>Uncompromising Quality</h3>
+                            </div>
+                            <div class="flip-card-back">
+                                <h3>Uncompromising Quality</h3>
+                                <p>We source exclusively from certified top-tier manufacturers to ensure safety and longevity in every tool and paint tin.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Flip Card 2 -->
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front clean-card">
+                                <div class="value-icon"><i class="fa-solid fa-handshake"></i></div>
+                                <h3>Customer Partnership</h3>
+                            </div>
+                            <div class="flip-card-back">
+                                <h3>Customer Partnership</h3>
+                                <p>We work hand-in-hand with contractors and DIYers, offering tailored advice to solve complex jobsite challenges.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Flip Card 3 -->
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front clean-card">
+                                <div class="value-icon"><i class="fa-solid fa-lightbulb"></i></div>
+                                <h3>Constant Innovation</h3>
+                            </div>
+                            <div class="flip-card-back">
+                                <h3>Constant Innovation</h3>
+                                <p>Embracing advanced color-matching tech and eco-friendly paint formulations to lead industry standards.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: NEW TIMELINE SECTION (REPLACED MILESTONES) -->
+        <section class="section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <span class="badge"><i class="fa-solid fa-timeline"></i> Chronological Journey</span>
+                    <h2>Our Growth Timeline</h2>
+                    <p>The key historical milestones that shaped Tool Hub over the years.</p>
+                </div>
+                <div class="timeline-section">
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-year">1998</span>
+                            <h4>The Humble Foundation</h4>
+                            <p>Opened our first specialty storefront with a curated inventory of essential hand tools and standard building primers.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-year">2008</span>
+                            <h4>Advanced Color Studio Expansion</h4>
+                            <p>Launched our computerized digital color-matching laboratory alongside heavy-duty commercial equipment hardware lines.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-year">2020</span>
+                            <h4>Digital Pro Portal Launch</h4>
+                            <p>Introduced our online contractor portal, dedicated same-day jobsite delivery fleet, and automated member loyalty discounts.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-year">2026</span>
+                            <h4>National Green Initiative</h4>
+                            <p>Pioneered sustainable eco-friendly paint lineups and expanded certified machinery maintenance repair bays nationwide.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- INTERACTIVE GALLERY SHOWCASE -->
+        <section class="section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <span class="badge"><i class="fa-solid fa-store"></i> Facilities & Experience</span>
+                    <h2>Inside Tool Hub Experience</h2>
+                    <p>Take a closer look at our state-of-the-art facilities and services.</p>
+                </div>
+                <div class="showcase-grid">
+                    <div class="showcase-display image-frame">
+                        <img id="showcaseImage" src="https://5.imimg.com/data5/ST/EJ/MY-3388860/final-1.jpg" alt="Showcase Feature">
+                    </div>
+                    <div class="showcase-options">
+                        <div class="showcase-option-card clean-card active" data-img="https://5.imimg.com/data5/ST/EJ/MY-3388860/final-1.jpg">
+                            <i class="fa-solid fa-store"></i>
+                            <div>
+                                <h4>Modern Retail Showroom</h4>
+                                <p>Browse thousands of premium power tools and equipment in a spacious, well-organized layout.</p>
+                            </div>
+                        </div>
+                        <div class="showcase-option-card clean-card" data-img="https://thepaintshop.ca/wp-content/uploads/2022/03/DSC1904-1024x683.jpg">
+                            <i class="fa-solid fa-palette"></i>
+                            <div>
+                                <h4>Advanced Color Studio</h4>
+                                <p>Utilize state-of-the-art digital scanners to get exact color mixes for any paint project.</p>
+                            </div>
+                        </div>
+                        <div class="showcase-option-card clean-card" data-img="https://www.avl.com/sites/default/files/2023-01/us_its_customer_service_repair_center1_10.jpg">
+                            <i class="fa-solid fa-screwdriver-wrench"></i>
+                            <div>
+                                <h4>Pro Service & Repair Bay</h4>
+                                <p>Certified technicians ready to maintain, calibrate, and repair your heavy-duty industrial machinery.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5: MEET OUR LEADERSHIP -->
+        <section class="section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <span class="badge"><i class="fa-solid fa-users"></i> Executive Leadership</span>
+                    <h2>Meet Our Leadership Team</h2>
+                    <p>Experienced professionals dedicated to your project success.</p>
+                </div>
+                <div class="team-grid">
+                    <div class="team-card clean-card">
+                        <div class="team-img image-frame">
+                            <img src="https://th.bing.com/th/id/OIP.Wlhn8j0xdlrojchE7vN-RQHaE6?r=0&o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Robert Vance">
+                        </div>
+                        <h4>Robert Vance</h4>
+                        <p>Founder & CEO</p>
+                        <button class="btn secondary-btn small-btn" onclick="document.getElementById('quoteModal').classList.add('active')">Get in Touch</button>
+                    </div>
+                    <div class="team-card clean-card">
+                        <div class="team-img image-frame">
+                            <img src="https://sgfcitizen.org/wp-content/uploads/2025/05/SarahJenkinsHighTide.jpg" alt="Sarah Jenkins">
+                        </div>
+                        <h4>Sarah Jenkins</h4>
+                        <p>Head of Color & Design</p>
+                        <button class="btn secondary-btn small-btn" onclick="document.getElementById('quoteModal').classList.add('active')">Get in Touch</button>
+                    </div>
+                    <div class="team-card clean-card">
+                        <div class="team-img image-frame">
+                            <img src="https://bgcncil.org/wp-content/uploads/2024/01/Cedric-Headshot-768x768.jpeg" alt="Marcus Sterling">
+                        </div>
+                        <h4>Marcus Sterling</h4>
+                        <p>Director of Hardware Supply</p>
+                        <button class="btn secondary-btn small-btn" onclick="document.getElementById('quoteModal').classList.add('active')">Get in Touch</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 6: IMPACT STATISTICS -->
+        <section class="section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <span class="badge"><i class="fa-solid fa-chart-line"></i> Our Track Record</span>
+                    <h2>Tool Hub by the Numbers</h2>
+                    <p>Our track record of reliability and trust.</p>
+                </div>
+                <div class="stats-grid">
+                    <div class="stat-card clean-card">
+                        <h3>28+</h3>
+                        <p>Years in Business</p>
+                    </div>
+                    <div class="stat-card clean-card">
+                        <h3>15k+</h3>
+                        <p>Projects Completed</p>
+                    </div>
+                    <div class="stat-card clean-card">
+                        <h3>100%</h3>
+                        <p>Certified Products</p>
+                    </div>
+                    <div class="stat-card clean-card">
+                        <h3>24/7</h3>
+                        <p>Pro Member Support</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 7: ORIGINAL SEPARATED CTA -->
+        <section class="cta-outer-section">
+            <div class="container">
+                <div class="cta-section">
+                    <h2>Ready to Start Your Next Project?</h2>
+                    <p>Join thousands of contractors and homeowners who trust Tool Hub for heavy-duty tools and pristine finishes.</p>
+                    <button class="cta-btn" onclick="document.getElementById('quoteModal').classList.add('active')">Request a Quote Now <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-col">
+                <a href="/about.html" class="logo">
+                    <div class="logo-icon-wrapper">
+                        <img src="/8eee87d8-c4de-4aaa-bc48-69386eb19802.jpg" alt="Tool Hub Logo" class="logo-light">
+                        <img src="/9e8f0496-54de-43a0-b288-77802af85bac.jpg" alt="Tool Hub Logo Dark" class="logo-dark">
+                    </div>
+                    <div class="logo-content">
+                        <span class="logo-title">Tool <span>Hub</span></span>
+                        <span class="logo-subtitle">Brush & Bolt</span>
+                    </div>
+                </a>
+                <p>Your trusted partner for professional hardware and superior painting solutions.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="index.html#products">Products</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Categories</h3>
+                <ul>
+                    <li><a href="index.html#products">Power Tools</a></li>
+                    <li><a href="index.html#products">Interior Paints</a></li>
+                    <li><a href="index.html#products">Safety Gear</a></li>
+                    <li><a href="index.html#products">Building Materials</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Newsletter</h3>
+                <p>Subscribe to receive updates on new products and contractor discounts.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" class="btn primary-btn"><i class="fa-solid fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Tool Hub. All Rights Reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#privacy">Privacy Policy</a>
+                    <a href="#terms">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="about.js"></script>
+</body>
+</html>

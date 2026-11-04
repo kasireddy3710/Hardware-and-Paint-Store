@@ -1,4 +1,4 @@
-:root {
+ :root {
             --bg-color: #dae7f5;
             --bg-secondary: #f1f5f9;
             --card-bg: #ffffff;
@@ -69,7 +69,7 @@
             background-color: var(--bg-secondary);
         }
 
-        /* ================= STANDARD WRAPPER (Lighting Effects Removed) ================= */
+        /* ================= STANDARD WRAPPER ================= */
         .img-glow-wrapper {
             position: relative;
             border-radius: 16px;
@@ -1046,61 +1046,53 @@
             margin-bottom: 0.5rem;
         }
 
-        .spotlight-link {
-            color: var(--primary-color);
-            font-weight: 600;
-            font-size: 0.9rem;
-            display: inline-flex;
+        /* ================= NEW IMAGE CTA SECTION ================= */
+        .image-cta-section {
+            padding: 6rem 0;
+        }
+
+        .image-cta-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
             align-items: center;
-            gap: 6px;
-            transition: var(--transition);
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
         }
 
-        .spotlight-link:hover {
-            color: var(--secondary-color);
-            gap: 12px;
-        }
-
-        /* ================= CTA (CALL TO ACTION) ================= */
-        .cta-section {
-            position: relative;
-            padding: 7rem 0;
-            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), 
-                        url('https://www.hardwarestore.com/media/wysiwyg/20240829_130402_-_Aubuchon_NEWPORT_NH_-_055.jpg?auto=webp&format=pjpg&quality=85') no-repeat center center/cover;
-            color: #fff;
-            text-align: center;
-        }
-
-        .cta-container h2 {
-            font-size: 3rem;
+        .image-cta-content h2 {
+            font-size: 2.4rem;
             font-weight: 800;
             margin-bottom: 1rem;
+            line-height: 1.2;
         }
 
-        .cta-container p {
-            font-size: 1.1rem;
-            margin-bottom: 2.5rem;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-            opacity: 0.9;
+        .image-cta-content p {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            margin-bottom: 2rem;
         }
 
-        .cta-btn {
-            background: var(--primary-color);
-            color: #fff;
-            padding: 1rem 2.5rem;
-            font-size: 1.1rem;
-            border-radius: 8px;
-            font-weight: 700;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-            transition: var(--transition);
+        .image-cta-img-wrapper {
+            width: 100%;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
         }
 
-        .cta-btn:hover {
-            background: var(--primary-hover);
-            transform: translateY(-4px) scale(1.02);
-            box-shadow: 0 15px 30px rgba(249, 115, 22, 0.4);
+        .image-cta-img-wrapper img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .image-cta-img-wrapper:hover img {
+            transform: scale(1.05);
         }
 
         /* ================= FOOTER ================= */
@@ -1229,7 +1221,7 @@
 
         /* ================= RESPONSIVE DESIGN ================= */
         @media (max-width: 1024px) {
-            .hero-container {
+            .hero-container, .image-cta-container {
                 grid-template-columns: 1fr;
                 gap: 3rem;
             }
@@ -1282,10 +1274,7 @@
             .stats-grid, .categories-grid, .showcase-grid, .features-grid, .rental-grid, .banner-grid, .paint-finishes-grid, .spotlight-grid {
                 grid-template-columns: 1fr;
             }
-            .hero-content h1 {
-                font-size: 2.5rem;
-            }
-            .cta-container h2 {
+            .hero-content h1, .image-cta-content h2 {
                 font-size: 2.2rem;
             }
             .footer-container {

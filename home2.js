@@ -194,4 +194,4 @@ const themeToggle = document.getElementById('themeToggle');
             } else {
                 header.style.boxShadow = 'none';
             }
-        });
+        }); 

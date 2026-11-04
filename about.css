@@ -674,7 +674,7 @@
             bottom: 20px;
             left: 50%;
             width: 4px;
-            background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
+            background: linear-gradient(to bottom, var(--primary-color), var(--primary-color));
             transform: translateX(-50%);
             border-radius: 4px;
         }
